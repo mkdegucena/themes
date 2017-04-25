@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="logo">
+    {{#link 'help_center'}}
+      <img src="{{logo_url}}" alt="{{t 'logo'}}">
+    {{/link}}
+  </div>
+  <div class="nav-wrapper">
+
+    <div>{{search submit=false instant=true class='search search-full'}}</div>
+
+    <span class="icon-menu"></span>
+    <nav class="user-nav" id="user-nav">
+      {{link 'community'}}
+      {{link 'new_request' class='submit-a-request'}}
+    </nav>
+    {{user_info}}
+  </div>
+</header>
