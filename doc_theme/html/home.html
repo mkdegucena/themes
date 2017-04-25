@@ -1,10 +1,71 @@
-<section class="section hero">
-  <div class="hero-inner">
-    {{search submit=false instant=true class='search search-full'}}
-  </div>
-</section>
+<div class="sidebar-panel">
+  <ul class="sidebar">
+    <li class="sidebar-item">
+      <a href={{page_path 'help_center'}} class="sidebar-item-title">
+        Home
+      </a>
+    </li>
+    {{#each categories}}
+      {{#if ../has_multiple_categories}}
+        <li class="sidebar-item">
+          <span class="sidebar-item-title">
+            {{name}}
+          </span>
+          <ul>
+          {{#each sections}}
+            <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
+              <span class="sidebar-item-title">
+                {{name}}
+                {{#if internal}}
+                  <span class="icon-lock" title="{{t 'internal'}}"></span>
+                {{/if}}
+              </span>
+              <ul>
+              {{#each articles}}
+                <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
+                  <a href='{{url}}' class="sidebar-item-link">
+                    {{title}}
+                    {{#if internal}}
+                      <span class="icon-lock" title="{{t 'internal'}}"></span>
+                    {{/if}}
+                  </a>
+                </li>
+              {{/each}}
+              </ul>
+            </li>
+          {{/each}}
+          </ul>
+        </li>
+      {{else}}
+        {{#each sections}}
+          <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
+            <span class="sidebar-item-title">
+              {{name}}
+              {{#if internal}}
+                <span class="icon-lock" title="{{t 'internal'}}"></span>
+              {{/if}}
+            </span>
+            <ul>
+              {{#each articles}}
+                <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
+                  <a href='{{url}}' class="sidebar-item-link">
+                    {{title}}
+                    {{#if internal}}
+                      <span class="icon-lock" title="{{t 'internal'}}"></span>
+                    {{/if}}
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+          </li>
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
 
-<div class="container">
+<div class="container content">
+
   <section class="section knowledge-base">
     <section class="categories blocks">
       <ul class="blocks-list">
