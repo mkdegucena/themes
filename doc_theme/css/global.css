@@ -402,21 +402,20 @@ ul {
 
 /***** Header *****/
 .header {
-  max-width: 1160px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /*max-width: 1160px;*/
   margin: 0 auto;
   padding: 0 5%;
-  position: relative;
+  /*position: relative;*/
   align-items: center;
   display: flex;
-  height: 71px;
+  height: 70px;
   justify-content: space-between;
-}
-
-@media (min-width: 1160px) {
-  .header {
-    padding: 0;
-    width: 90%;
-  }
+  background: #FFF;
+  border-bottom: 1px solid #EEE;
+  z-index: 10;
 }
 
 .logo img {
