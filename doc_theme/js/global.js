@@ -4,6 +4,30 @@
 
 $(document).ready(function() {
 
+    $(".sidebar-panel").on("click", ".sidebar-item-title", function() {
+      var $this = $(this);
+
+      if ($this.parent(".open").length) {
+        $this.siblings("ul").slideUp(200).closest(".open").removeClass('open');
+      } else {
+
+        // Close old sidebar-item
+        $this.closest("li")
+          .siblings(".open").removeClass("open")
+          .find("ul").slideUp(200)
+          .find(".open").removeClass("open");
+
+        // Open new sidebar item
+        $this.siblings("ul").slideDown(200).closest("li").addClass('open');
+      }
+
+
+      return false;
+    });
+
+
+
+
   // social share popups
   $(".share a").click(function(e) {
     e.preventDefault();
