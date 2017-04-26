@@ -449,6 +449,11 @@ ul {
   margin: 20px;
 }
 
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .nav-wrapper a {
   border: 0;
   color: $color_4;
@@ -493,6 +498,11 @@ ul {
 [dir="rtl"] .nav-wrapper .icon-menu {
   margin-left: 10px;
   margin-right: 0;
+}
+
+.nav-wrapper .search {
+  min-width: 300px;
+  margin-right: 20px;
 }
 
 /***** User info in header *****/
@@ -624,7 +634,7 @@ ul {
   left: 0;
   bottom: 0;
   padding: 40px 30px 30px 5%;
-  width: 350px;
+  width: 320px;
   background: #FAFAFA;
   overflow-x: hidden;
   overflow-y: auto;
@@ -633,17 +643,18 @@ ul {
 }
 
 .sidebar-item {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.sidebar-item {
-  margin-top: 10px;
+.sidebar-item .sidebar-item {
   margin-left: 15px;
 }
 
 .sidebar-item-title {
   color: #666;
   cursor: pointer;
+  font-size: 16px;
 }
 
 
@@ -689,8 +700,9 @@ ul {
   width: auto;
   height: auto;
   min-height: 100vh;
-  margin-top: 70px;
-  margin-left: 350px;
+  max-width: 900px;
+  padding: 40px 5% 0;
+  margin: 70px auto 0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -698,6 +710,12 @@ ul {
   transform: translate3d(0, 0, 0);
   background: #fff;
   z-index: 2;
+}
+
+@media (max-width: 1500px) {
+  .content {
+    margin-left: 320px;
+  }
 }
 
 /***** Breadcrumbs *****/
@@ -1042,8 +1060,11 @@ ul {
 
 .community,
 .activity {
-  border-top: 1px solid #ddd;
   padding: 30px 0;
+}
+
+.activity {
+  border-top: 1px solid #ddd;
 }
 
 /***** Recent activity *****/
