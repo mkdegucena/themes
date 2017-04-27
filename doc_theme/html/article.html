@@ -23,22 +23,6 @@
 
 <div class="container content">
   <div class="article-container" id="article-container">
-    <section class="article-sidebar">
-      <section class="section-articles collapsible-sidebar">
-        <h3 class="collapsible-sidebar-title sidenav-title">{{t 'articles_in_section'}}</h3>
-        <ul>
-          {{#each section.articles}}
-            <li>
-              <a href="{{url}}" class="sidenav-item {{#is id ../article.id}}current-article{{/is}}">{{title}}</a>
-            </li>
-          {{/each}}
-        </ul>
-        {{#if section.more_articles}}
-          <a href="{{section.url}}" class="article-sidebar-item">{{t 'see_more'}}</a>
-        {{/if}}
-      </section>
-    </section>
-
     <article class="article">
       <header class="article-header">
         <h1 title="{{article.title}}" class="article-title">
