@@ -1,9 +1,25 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    {{search scoped=true submit=false}}
-  </nav>
+<div id="sidebar" class="sidebar-panel">
+  <ul class="sidebar">
+    <li class="sidebar-item">
+      <a href="{{page_path 'help_center'}}" class="sidebar-item-title">
+        Home
+      </a>
+    </li>
+
+    <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in sections'>
+      <span class="sidebar-item-title">
+        {[{section.name}]}
+      </span>
+      <ul>
+        <li :class="['sidebar-item', isCurrent(article.id)]" v-for='article in section.articles'>
+          <a :href='article.html_url' class="sidebar-item-link">
+            {[{article.title}]}
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
 
   <div class="article-container" id="article-container">
     <section class="article-sidebar">
@@ -208,3 +224,6 @@
     </article>
   </div>
 </div>
+
+
+<script>sidebar.$mount("#sidebar");</script>

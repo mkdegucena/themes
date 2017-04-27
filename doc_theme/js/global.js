@@ -1,6 +1,90 @@
-/*
- * jQuery v1.9.1 included
- */
+// Custom delimiter for Vue templates
+Vue.options.delimiters = ['{[{', '}]}'];
+
+
+var sidebar = new Vue({
+  props: ['current'],
+
+  data: {
+    page: null,
+    categories: [],
+    sections: [],
+    articles: [],
+  },
+
+  created: function() {
+    this.fetchData();
+  },
+
+  methods: {
+    isOpen: function(id) {
+      var currentId = this.getPageId(window.location.href);
+      console.log(currentId, id)
+      return id == currentId ? 'current' : '';
+    },
+
+    isCurrent: function(id) {
+      var currentId = this.getPageId(window.location.href);
+      console.log(currentId, id)
+      return id == currentId ? 'current' : '';
+    },
+
+    fetchData: function(url) {
+      var url = url || "/api/v2/help_center/" + this.getLocale() + "/articles.json?per_page=100&include=sections,categories";
+
+      $.get(url, function(data){
+        if (data.count) {
+          this.categories = _.sortBy(_.uniq(this.categories.concat(data.categories), "id"), "position");
+          this.sections = _.sortBy(_.uniq(this.sections.concat(data.sections), "id"), "position");
+          this.articles = _.sortBy(_.uniq(this.articles.concat(data.articles), "id"), "position");
+
+          if (data.next_page) {
+            this.fetchData(data.next_page + "&per_page=100");
+          } else {
+            this.mapArticlesToSections();
+          }
+        }
+      }.bind(this));
+    },
+
+    mapArticlesToSections: function() {
+      var articleGroups = _.groupBy(this.articles, "section_id");
+
+      _.each(this.sections, function(section){
+        section.articles = articleGroups[section.id];
+      }, this);
+    },
+
+    getLocale: function() {
+      var links = window.location.href.split("/"),
+          hcIndex = links.indexOf("hc"),
+          links2 = links[hcIndex + 1].split("?"),
+          locale = links2[0];
+
+      return locale;
+    },
+
+    getPageId: function(url) {
+      var links = url.split("/"),
+          page = links[links.length - 1],
+          result = page.split("-")[0];
+
+      return parseInt(result,10) || null;
+    },
+
+    getUrlParameter: function(name, url) {
+      url = url || location.search;
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(url);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+  }
+});
+
+
+
+
 
 $(document).ready(function() {
 
