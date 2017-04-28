@@ -6,11 +6,11 @@
       </a>
     </li>
 
-    <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in sections'>
-      <span class="sidebar-item-title">
+    <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in sections' :data-id='section.id'>
+      <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
         {[{section.name}]}
       </span>
-      <ul>
+      <ul v-if='section.id === activeSection'>
         <li :class="['sidebar-item', isCurrent(article.id)]" v-for='article in section.articles'>
           <a :href='article.html_url' class="sidebar-item-link">
             {[{article.title}]}

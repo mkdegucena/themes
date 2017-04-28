@@ -10,6 +10,7 @@ var sidebar = new Vue({
     categories: [],
     sections: [],
     articles: [],
+    activeSection: null
   },
 
   created: function() {
@@ -18,14 +19,11 @@ var sidebar = new Vue({
 
   methods: {
     isOpen: function(id) {
-      var currentId = this.getPageId(window.location.href);
-      console.log(currentId, id)
-      return id == currentId ? 'current' : '';
+      return id == this.activeSection ? 'open' : '';
     },
 
     isCurrent: function(id) {
       var currentId = this.getPageId(window.location.href);
-      console.log(currentId, id)
       return id == currentId ? 'current' : '';
     },
 
@@ -41,18 +39,34 @@ var sidebar = new Vue({
           if (data.next_page) {
             this.fetchData(data.next_page + "&per_page=100");
           } else {
-            this.mapArticlesToSections();
+            this.mapArticlesToSections(this.articles, this.sections);
+            this.activeSection = this.getCurrentSection(this.articles);
           }
         }
       }.bind(this));
     },
 
-    mapArticlesToSections: function() {
-      var articleGroups = _.groupBy(this.articles, "section_id");
+    mapArticlesToSections: function(articles, sections) {
+      var articleGroups = _.groupBy(articles, "section_id");
 
-      _.each(this.sections, function(section){
+      _.each(sections, function(section){
         section.articles = articleGroups[section.id];
       }, this);
+    },
+
+    setActiveSection: function(sectionId) {
+      if (sectionId === this.activeSection) {
+        this.activeSection = null;
+      } else {
+        this.activeSection = sectionId;
+      }
+    },
+
+    getCurrentSection: function(articles) {
+      var currentArticleId = this.getPageId(window.location.href),
+          currentArticle = _.find(articles, {id: currentArticleId});
+
+      return currentArticle ? currentArticle.section_id : null;
     },
 
     getLocale: function() {
@@ -78,7 +92,7 @@ var sidebar = new Vue({
       var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
           results = regex.exec(url);
       return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
+    },
   }
 });
 
@@ -87,30 +101,6 @@ var sidebar = new Vue({
 
 
 $(document).ready(function() {
-
-    $(".sidebar-panel").on("click", ".sidebar-item-title", function() {
-      var $this = $(this);
-
-      if ($this.parent(".open").length) {
-        $this.siblings("ul").slideUp(200).closest(".open").removeClass('open');
-      } else {
-
-        // Close old sidebar-item
-        $this.closest("li")
-          .siblings(".open").removeClass("open")
-          .find("ul").slideUp(200)
-          .find(".open").removeClass("open");
-
-        // Open new sidebar item
-        $this.siblings("ul").slideDown(200).closest("li").addClass('open');
-      }
-
-
-      return false;
-    });
-
-
-
 
   // social share popups
   $(".share a").click(function(e) {
