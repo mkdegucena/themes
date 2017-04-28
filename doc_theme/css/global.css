@@ -48,10 +48,6 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
-  text-decoration: underline;
-}
-
 input,
 textarea {
   color: #000;
