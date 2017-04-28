@@ -1357,6 +1357,13 @@ ul {
   color: darken($color_4, 20%);
 }
 
+.article-body a:hover,
+.article-body a:active,
+.article-body a:focus {
+  text-decoration: underline;
+}
+
+
 .article-body code {
   background: darken($color_5, 3%);
   border: 1px solid #ddd;
