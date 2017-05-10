@@ -31,30 +31,6 @@
             <span class="icon-lock" title="{{t 'internal'}}"></span>
           {{/if}}
         </h1>
-
-        <div class="article-author">
-          <div class="avatar article-avatar">
-            {{#if article.author.agent}}
-              <span class="icon-agent"></span>
-            {{/if}}
-            <img src="{{article.author.avatar_url}}" alt="Avatar" class="user-avatar"/>
-          </div>
-          <div class="article-meta">
-            {{#link 'user_profile' id=article.author.id}}
-              {{article.author.name}}
-            {{/link}}
-
-            <ul class="meta-group">
-              {{#is article.created_at article.updated_at}}
-                <li class="meta-data">{{date article.created_at timeago=true}}</li>
-              {{else}}
-                <li class="meta-data">{{date article.updated_at timeago=true}}</li>
-                <li class="meta-data">{{t 'updated'}}</li>
-              {{/is}}
-            </ul>
-          </div>
-        </div>
-        {{subscribe}}
       </header>
 
       <section class="article-info">
