@@ -629,7 +629,7 @@ ul {
   top: 71px;
   left: 0;
   bottom: 0;
-  padding: 40px 30px 30px 5%;
+  padding: 40px 30px 30px;
   width: 320px;
   background: #FAFAFA;
   overflow-x: hidden;
@@ -690,7 +690,7 @@ ul {
   height: auto;
   min-height: 100vh;
   max-width: 900px;
-  padding: 40px 5% 0;
+  padding: 40px;
   margin: 70px auto 0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -1251,11 +1251,7 @@ ul {
 
 @media (min-width: 1024px) {
   .article {
-/*    flex: 1 0 66%;
-    max-width: 66%;
-    min-width: 640px;
-    padding: 0 30px;
-*/  }
+  }
 }
 
 .article-container {
@@ -1275,14 +1271,15 @@ ul {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 40px;
-  margin-top: 20px;
+}
+
+.article-header h1 {
+  margin: 0;
 }
 
 @media (min-width: 768px) {
   .article-header {
     flex-direction: row;
-    margin-top: 0;
   }
 }
 
