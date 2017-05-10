@@ -1394,15 +1394,42 @@ ul {
 
 .article-content {
   line-height: 1.6;
-  margin: 40px 0;
+  margin: 0 0 40px;
   word-wrap: break-word;
 }
 
 .article-footer {
-  align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.article-nav-box {
+  max-width: 30%;
+}
+
+.article-nav-label {
+  display: block;
+  font-size: 16px;
+}
+
+.article-nav-title {
+  display: none;
+  font-size: 14px;
+  color: #BBB;
+}
+
+@media (min-width: 768px) {
+  .article-nav-title {
+    display: block;
+  }
+}
+
+
+.article-nav-next {
+  text-align: right;
 }
 
 .article-comment-count {

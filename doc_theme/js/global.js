@@ -10,7 +10,12 @@ var sidebar = new Vue({
     categories: [],
     sections: [],
     articles: [],
-    activeSection: null
+    currentArticle: null,
+    activeSection: null,
+    nav: {
+      prev: null,
+      next: null,
+    }
   },
 
   created: function() {
@@ -40,7 +45,12 @@ var sidebar = new Vue({
             this.fetchData(data.next_page + "&per_page=100");
           } else {
             this.mapArticlesToSections(this.articles, this.sections);
-            this.activeSection = this.getCurrentSection(this.articles);
+
+            this.currentArticle = this.getCurrentArticle(this.articles);
+            if (this.currentArticle) {
+              this.activeSection = this.currentArticle.section_id;
+              this.setNavLinks(this.sections, this.currentArticle);
+            }
           }
         }
       }.bind(this));
@@ -62,11 +72,24 @@ var sidebar = new Vue({
       }
     },
 
-    getCurrentSection: function(articles) {
-      var currentArticleId = this.getPageId(window.location.href),
-          currentArticle = _.find(articles, {id: currentArticleId});
+    getCurrentArticle: function(articles) {
+      var currArticleId = this.getPageId(window.location.href),
+          currArticle = _.find(articles, {id: currArticleId});
 
-      return currentArticle ? currentArticle.section_id : null;
+      return currArticle;
+    },
+
+    setNavLinks: function(sections, currArticle) {
+      let currSection = _.find(sections, {id: currArticle.section_id}),
+          currArticleIndex = _.findIndex(currSection.articles, {id: currArticle.id}),
+          prevArticle,
+          nextArticle;
+
+      if (currArticleIndex !== 'undefined') {
+        this.nav.prev = currArticleIndex > 0 ? currSection.articles[currArticleIndex - 1] : null;
+        this.nav.next = currArticleIndex < currSection.articles.length ? currSection.articles[currArticleIndex + 1] : null;
+      }
+
     },
 
     getLocale: function() {
