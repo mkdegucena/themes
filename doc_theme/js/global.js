@@ -6,7 +6,7 @@ var sidebar = new Vue({
   props: ['current'],
 
   data: {
-    page: null,
+    isArticle: false,
     categories: [],
     sections: [],
     articles: [],
@@ -19,6 +19,8 @@ var sidebar = new Vue({
   },
 
   created: function() {
+    this.isArticle = window.location.pathname.indexOf("/articles/") > -1;
+
     this.fetchData();
   },
 
@@ -46,6 +48,8 @@ var sidebar = new Vue({
           } else {
             this.mapArticlesToSections(this.articles, this.sections);
 
+          // Set current article and nav links if on article page
+          if (this.isArticle) {
             this.currentArticle = this.getCurrentArticle(this.articles);
             if (this.currentArticle) {
               this.activeSection = this.currentArticle.section_id;
