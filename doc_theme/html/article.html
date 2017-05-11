@@ -72,28 +72,8 @@
             </a>
           </div>
         </div>
-        {{#with article}}
-          <div class="article-votes">
-            <span class="article-votes-question">{{t 'was_this_article_helpful'}}</span>
-            <div class="article-votes-controls" role='radiogroup'>
-              {{vote 'up' role='radio' class='button article-vote article-vote-up'}}
-              {{vote 'down' role='radio' class='button article-vote article-vote-down'}}
-            </div>
-            <small class="article-votes-count">
-              {{vote 'label' class='article-vote-label'}}
-            </small>
-          </div>
-        {{/with}}
 
-        <div class="article-return-to-top">
-          <a href="#article-container">{{t 'return_to_top'}}<span class="icon-arrow-up"></span></a>
-        </div>
       </footer>
-
-      <section class="article-relatives">
-        {{recent_articles}}
-        {{related_articles}}
-      </section>
     </article>
   </div>
 </div>
