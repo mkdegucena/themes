@@ -44,6 +44,7 @@ var sidebar = new Vue({
           this.articles = _.sortBy(_.uniq(this.articles.concat(data.articles), "id"), "position");
 
           this.mapArticlesToSections(this.articles, this.sections);
+          this.mapSectionsToCategories(this.sections, this.categories);
 
           // Set current article and nav links if on article page
           if (this.isArticle) {
@@ -66,6 +67,14 @@ var sidebar = new Vue({
 
       _.each(sections, function(section){
         section.articles = articleGroups[section.id];
+      }, this);
+    },
+
+    mapSectionsToCategories: function(sections, categories) {
+      var sectionGroups = _.groupBy(sections, "category_id");
+
+      _.each(categories, function(category){
+        category.sections = sectionGroups[category.id];
       }, this);
     },
 
