@@ -3,8 +3,6 @@ Vue.options.delimiters = ['{[{', '}]}'];
 
 
 var sidebar = new Vue({
-  props: ['current'],
-
   data: {
     isArticle: false,
     categories: [],
