@@ -43,10 +43,7 @@ var sidebar = new Vue({
           this.sections = _.sortBy(_.uniq(this.sections.concat(data.sections), "id"), "position");
           this.articles = _.sortBy(_.uniq(this.articles.concat(data.articles), "id"), "position");
 
-          if (data.next_page) {
-            this.fetchData(data.next_page + "&per_page=100");
-          } else {
-            this.mapArticlesToSections(this.articles, this.sections);
+          this.mapArticlesToSections(this.articles, this.sections);
 
           // Set current article and nav links if on article page
           if (this.isArticle) {
@@ -55,6 +52,10 @@ var sidebar = new Vue({
               this.activeSection = this.currentArticle.section_id;
               this.setNavLinks(this.sections, this.currentArticle);
             }
+          }
+
+          if (data.next_page) {
+            this.fetchData(data.next_page + "&per_page=100");
           }
         }
       }.bind(this));
