@@ -1,10 +1,32 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    {{search submit=false}}
-  </nav>
+<div id="sidebar" class="sidebar-panel">
+  <ul class="sidebar">
+    <li class="sidebar-item">
+      <a href="{{page_path 'help_center'}}" class="sidebar-item-title">
+        Home
+      </a>
+    </li>
+    <li :class="showCategory && 'sidebar-section'" v-for='category in categories' :data-id='category.id'>
+      <h4 class="sidebar-category-title" v-if='showCategory'>{[{category.name}]}</h4>
+      <ul>
+        <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in category.sections' :data-id='section.id'>
+          <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
+            {[{section.name}]}
+          </span>
+          <ul v-if='section.id === activeSection'>
+            <li :class="['sidebar-item', isCurrent(article.id)]" v-for='article in section.articles'>
+              <a :href='article.html_url' class="sidebar-item-link">
+                {[{article.title}]}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
 
+
+<div class="container content">
   <div class="section-container">
     <section class="section-content">
       <header class="page-header">
@@ -14,7 +36,7 @@
             <span class="icon-lock" title="{{t 'internal'}}"></span>
           {{/if}}
         </h1>
-        {{subscribe}}
+
         {{#if section.description}}
           <p class="page-header-description">{{section.description}}</p>
         {{/if}}
@@ -42,3 +64,5 @@
     </section>
   </div>
 </div>
+
+<script>sidebar.$mount("main");</script>

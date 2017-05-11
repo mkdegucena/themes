@@ -1,68 +1,30 @@
-<div class="sidebar-panel">
+<div id="sidebar" class="sidebar-panel">
   <ul class="sidebar">
-    <li class="sidebar-item">
-      <a href={{page_path 'help_center'}} class="sidebar-item-title">
+    <li class="sidebar-item open">
+      <a href="{{page_path 'help_center'}}" class="sidebar-item-title">
         Home
       </a>
     </li>
-    {{#each categories}}
-      {{#if ../has_multiple_categories}}
-        <li class="sidebar-item">
-          <span class="sidebar-item-title">
-            {{name}}
+    <li :class="showCategory && 'sidebar-section'" v-for='category in categories' :data-id='category.id'>
+      <h4 class="sidebar-category-title" v-if='showCategory'>{[{category.name}]}</h4>
+      <ul>
+        <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in category.sections' :data-id='section.id'>
+          <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
+            {[{section.name}]}
           </span>
-          <ul>
-          {{#each sections}}
-            <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
-              <span class="sidebar-item-title">
-                {{name}}
-                {{#if internal}}
-                  <span class="icon-lock" title="{{t 'internal'}}"></span>
-                {{/if}}
-              </span>
-              <ul>
-              {{#each articles}}
-                <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
-                  <a href='{{url}}' class="sidebar-item-link">
-                    {{title}}
-                    {{#if internal}}
-                      <span class="icon-lock" title="{{t 'internal'}}"></span>
-                    {{/if}}
-                  </a>
-                </li>
-              {{/each}}
-              </ul>
+          <ul v-if='section.id === activeSection'>
+            <li :class="['sidebar-item', isCurrent(article.id)]" v-for='article in section.articles'>
+              <a :href='article.html_url' class="sidebar-item-link">
+                {[{article.title}]}
+              </a>
             </li>
-          {{/each}}
           </ul>
         </li>
-      {{else}}
-        {{#each sections}}
-          <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
-            <span class="sidebar-item-title">
-              {{name}}
-              {{#if internal}}
-                <span class="icon-lock" title="{{t 'internal'}}"></span>
-              {{/if}}
-            </span>
-            <ul>
-              {{#each articles}}
-                <li class="sidebar-item {{#if internal}}sidebar-item-internal{{/if}}">
-                  <a href='{{url}}' class="sidebar-item-link">
-                    {{title}}
-                    {{#if internal}}
-                      <span class="icon-lock" title="{{t 'internal'}}"></span>
-                    {{/if}}
-                  </a>
-                </li>
-              {{/each}}
-            </ul>
-          </li>
-        {{/each}}
-      {{/if}}
-    {{/each}}
+      </ul>
+    </li>
   </ul>
 </div>
+
 
 <div class="container content">
 
@@ -98,3 +60,6 @@
     {{recent_activity}}
   </section>
 </div>
+
+
+<script>sidebar.$mount("#sidebar");</script>

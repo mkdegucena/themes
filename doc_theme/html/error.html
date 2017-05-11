@@ -1,4 +1,32 @@
-<div class="container-divider"></div>
+<div id="sidebar" class="sidebar-panel">
+  <ul class="sidebar">
+    <li class="sidebar-item">
+      <a href="{{page_path 'help_center'}}" class="sidebar-item-title">
+        Home
+      </a>
+    </li>
+    <li :class="showCategory && 'sidebar-section'" v-for='category in categories' :data-id='category.id'>
+      <h4 class="sidebar-category-title" v-if='showCategory'>{[{category.name}]}</h4>
+      <ul>
+        <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in category.sections' :data-id='section.id'>
+          <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
+            {[{section.name}]}
+          </span>
+          <ul v-if='section.id === activeSection'>
+            <li :class="['sidebar-item', isCurrent(article.id)]" v-for='article in section.articles'>
+              <a :href='article.html_url' class="sidebar-item-link">
+                {[{article.title}]}
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="container content">
+
 <div class="error-page">
   <h1>{{t 'oops'}}</h1>
 
@@ -19,3 +47,8 @@
     {{t 'back_to_homepage'}}
   {{/link}}
 </div>
+
+</div>
+
+
+<script>sidebar.$mount("main");</script>
