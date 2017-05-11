@@ -30,12 +30,12 @@ var sidebar = new Vue({
     },
 
     isCurrent: function(id) {
-      var currentId = this.getPageId(window.location.href);
+      var currentId = this._getPageId(window.location.href);
       return id == currentId ? 'current' : '';
     },
 
     fetchData: function(url) {
-      var url = url || "/api/v2/help_center/" + this.getLocale() + "/articles.json?per_page=100&include=sections,categories";
+      var url = url || "/api/v2/help_center/" + this._getLocale() + "/articles.json?per_page=100&include=sections,categories";
 
       $.get(url, function(data){
         if (data.count) {
@@ -78,7 +78,7 @@ var sidebar = new Vue({
     },
 
     getCurrentArticle: function(articles) {
-      var currArticleId = this.getPageId(window.location.href),
+      var currArticleId = this._getPageId(window.location.href),
           currArticle = _.find(articles, {id: currArticleId});
 
       return currArticle;
@@ -97,7 +97,7 @@ var sidebar = new Vue({
 
     },
 
-    getLocale: function() {
+    _getLocale: function() {
       var links = window.location.href.split("/"),
           hcIndex = links.indexOf("hc"),
           links2 = links[hcIndex + 1].split("?"),
@@ -106,7 +106,7 @@ var sidebar = new Vue({
       return locale;
     },
 
-    getPageId: function(url) {
+    _getPageId: function(url) {
       var links = url.split("/"),
           page = links[links.length - 1],
           result = page.split("-")[0];
