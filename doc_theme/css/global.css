@@ -1175,12 +1175,6 @@ ul {
   flex: 1;
 }
 
-@media (min-width: 1024px) {
-  .category-content {
-    flex: 0 0 80%;
-  }
-}
-
 .section-tree {
   display: flex;
   flex-direction: column;
@@ -1245,12 +1239,6 @@ ul {
 
 .section-content {
   flex: 1;
-}
-
-@media (min-width: 1024px) {
-  .section-content {
-    flex: 0 0 80%;
-  }
 }
 
 .section-subscribe .dropdown-toggle::after {
