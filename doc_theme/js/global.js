@@ -24,7 +24,14 @@ var sidebar = new Vue({
     this.fetchData();
   },
 
+  computed: {
+    showCategory: function() {
+      return this.categories.length > 1;
+    }
+  },
+
   methods: {
+
     isOpen: function(id) {
       return id == this.activeSection ? 'open' : '';
     },
