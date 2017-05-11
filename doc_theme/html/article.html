@@ -60,16 +60,16 @@
       <footer>
         <div class="article-footer">
           <div class="article-nav-box">
-          <a v-if="nav.prev" :href="nav.prev.html_url" class="article-nav article-nav-prev">
-            <span class="article-nav-label">Prev</span>
-            <span class="article-nav-title">{[{nav.prev.title}]}</span>
-          </a>
+            <a v-if="nav.prev" :href="nav.prev.html_url" class="article-nav article-nav-prev">
+              <span class="article-nav-label">Prev</span>
+              <span class="article-nav-title">{[{nav.prev.title}]}</span>
+            </a>
           </div>
           <div class="article-nav-box">
-          <a v-if="nav.next" :href="nav.next.html_url" class="article-nav article-nav-next">
-            <span class="article-nav-label">Next</span>
-            <span class="article-nav-title">{[{nav.next.title}]}</span>
-          </a>
+            <a v-if="nav.next" :href="nav.next.html_url" class="article-nav article-nav-next">
+              <span class="article-nav-label">Next</span>
+              <span class="article-nav-title">{[{nav.next.title}]}</span>
+            </a>
           </div>
         </div>
         {{#with article}}
