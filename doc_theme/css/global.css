@@ -707,7 +707,7 @@ ul {
   left: 0;
   width: auto;
   height: auto;
-  min-height: 100vh;
+  min-height: 40vh;
   max-width: 900px;
   padding: 40px;
   margin: 70px auto 0;
@@ -903,7 +903,25 @@ ul {
   font-size: 15px;
 }
 
+
+/***** Home *****/
+.home-title {
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+.home-desc {
+  text-align: center;
+}
+
+.knowledge-base {
+  margin: 40px 0;
+}
+
 /***** Blocks *****/
+
+
+
 /* Used in Homepage#categories and Community#topics */
 .blocks-list {
   display: flex;
@@ -920,10 +938,10 @@ ul {
 }
 
 .blocks-item {
-  border: 1px solid $color_1;
+  border: 1px solid #CCC;
   border-radius: 4px;
   box-sizing: border-box;
-  color: $color_1;
+  color: #666;
   display: flex;
   flex: 1 0 340px;
   flex-direction: column;
@@ -941,6 +959,7 @@ ul {
 
 .blocks-item:hover, .blocks-item:focus, .blocks-item:active {
   background-color: $color_1;
+  border: 1px solid $color_1;
 }
 
 .blocks-item:hover *, .blocks-item:focus *, .blocks-item:active * {
@@ -975,11 +994,14 @@ ul {
 
 .blocks-item-title {
   margin-bottom: 0;
+  color: #444;
 }
 
 .blocks-item-description {
+  max-width: 300px;
+  margin: 0 auto;
   font-weight: 300;
-  margin: 0;
+  color: #888;
 }
 
 .blocks-item-description:not(:empty) {

@@ -27,38 +27,49 @@
 
 
 <div class="container content">
+  
+  <div class="community-image"></div>
+
+  <h1 class="home-title">Welcome to Zen Themes!</h1>
+  <p class="home-desc">Get familiar with the features and how they work:</p>
 
   <section class="section knowledge-base">
-    {{#if promoted_articles}}
-      <section class="articles">
-        <h3>{{t 'promoted_articles'}}</h3>
-        <ul class="article-list promoted-articles">
-          {{#each promoted_articles}}
-            <li class="promoted-articles-item">
-              <a href="{{url}}">
-                {{title}}
+    <section class="categories blocks">
+      <ul class="blocks-list">
+        {{#each categories}}
+          {{#if ../has_multiple_categories}}
+            <li class="blocks-item">
+              <a href='{{url}}' class="blocks-item-link">
+                <h3 class="blocks-item-title">{{name}}</h3>
+                <p class="blocks-item-description">{{excerpt description}}</p>
               </a>
             </li>
-          {{/each}}
-        </ul>
-      </section>
-    {{/if}}
-  </section>
-
-  {{#if help_center.community_enabled}}
-    <section class="section community">
-      <h2>{{t 'community'}}</h2>
-      {{#link 'community' class='community-link'}}
-        {{t 'join_conversation'}}
-      {{/link}}
-
-      <div class="community-image"></div>
+          {{else}}
+            {{#each sections}}
+              <li class="blocks-item {{#if internal}}blocks-item-internal{{/if}}">
+                <a href='{{url}}' class="blocks-item-link">
+                  <h3 class="blocks-item-title">
+                    {{name}}
+                    {{#if internal}}
+                      <span class="icon-lock" title="{{t 'internal'}}"></span>
+                    {{/if}}
+                  </h3>
+                  <p class="blocks-item-description">{{excerpt description}}</p>
+                </a>
+              </li>
+            {{/each}}
+          {{/if}}
+        {{/each}}
+      </ul>
+      {{pagination}}
     </section>
-  {{/if}}
-
-  <section class="section activity">
-    {{recent_activity}}
   </section>
+
+  <section class="section support">
+    <h3>Still have questions?</h3>
+    <p>We're happy to help with whatever questions you have! You can reach out to us by chat or <a href="{{page_path 'new_request'}}">send us an email</a>!</p>
+  </section>
+
 </div>
 
 
