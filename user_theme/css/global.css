@@ -1,5 +1,7 @@
 @charset "UTF-8";
+
 /***** Base *****/
+
 * {
   box-sizing: border-box;
 }
@@ -20,7 +22,12 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font_1;
   font-weight: 400;
   margin-top: 0;
@@ -48,7 +55,9 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:active, a:focus {
+a:hover,
+a:active,
+a:focus {
   text-decoration: underline;
 }
 
@@ -149,8 +158,11 @@ ul {
   color: inherit;
 }
 
+
 /***** Buttons *****/
-.button, [role="button"] {
+
+.button,
+[role="button"] {
   border: 1px solid $color_1;
   border-radius: 4px;
   color: $color_1;
@@ -169,31 +181,47 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .button, [role="button"] {
+  .button,
+  [role="button"] {
     width: auto;
   }
 }
 
-.button::after, [role="button"]::after {
+.button::after,
+[role="button"]::after {
   color: $color_1;
 }
 
-.button:hover, .button:active, .button:focus, .button[aria-selected="true"], [role="button"]:hover, [role="button"]:active, [role="button"]:focus, [role="button"][aria-selected="true"] {
+.button:hover,
+.button:active,
+.button:focus,
+.button[aria-selected="true"],
+[role="button"]:hover,
+[role="button"]:active,
+[role="button"]:focus,
+[role="button"][aria-selected="true"] {
   background-color: $color_1;
   color: $color_2;
   text-decoration: none;
 }
 
-.button[aria-selected="true"]:hover, .button[aria-selected="true"]:focus, .button[aria-selected="true"]:active, [role="button"][aria-selected="true"]:hover, [role="button"][aria-selected="true"]:focus, [role="button"][aria-selected="true"]:active {
+.button[aria-selected="true"]:hover,
+.button[aria-selected="true"]:focus,
+.button[aria-selected="true"]:active,
+[role="button"][aria-selected="true"]:hover,
+[role="button"][aria-selected="true"]:focus,
+[role="button"][aria-selected="true"]:active {
   background-color: darken($color_1, 20%);
   border-color: darken($color_1, 20%);
 }
 
-.button[data-disabled], [role="button"][data-disabled] {
+.button[data-disabled],
+[role="button"][data-disabled] {
   cursor: default;
 }
 
-.button-large, input[type="submit"] {
+.button-large,
+input[type="submit"] {
   background-color: $color_1;
   border: 0;
   border-radius: 4px;
@@ -207,16 +235,23 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .button-large, input[type="submit"] {
+  .button-large,
+  input[type="submit"] {
     width: auto;
   }
 }
 
-.button-large:hover, .button-large:active, .button-large:focus, input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+.button-large:hover,
+.button-large:active,
+.button-large:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus {
   background-color: darken($color_1, 20%);
 }
 
-.button-large[disabled], input[type="submit"][disabled] {
+.button-large[disabled],
+input[type="submit"][disabled] {
   background-color: #ddd;
 }
 
@@ -226,13 +261,17 @@ ul {
   background-color: transparent;
 }
 
-.button-secondary:hover, .button-secondary:focus, .button-secondary:active {
+.button-secondary:hover,
+.button-secondary:focus,
+.button-secondary:active {
   color: $color_3;
   border: 1px solid #ddd;
   background-color: darken($color_5, 3%);
 }
 
+
 /***** Tables *****/
+
 .table {
   width: 100%;
   table-layout: fixed;
@@ -252,8 +291,8 @@ ul {
   text-align: left;
 }
 
-[dir="rtl"] .table th, [dir="rtl"]
-.table th a {
+[dir="rtl"] .table th,
+[dir="rtl"] .table th a {
   text-align: right;
 }
 
@@ -280,19 +319,23 @@ ul {
 }
 
 @media (min-width: 1024px) {
-  .table td, .table th {
+  .table td,
+  .table th {
     padding: 20px 30px;
   }
 }
 
 @media (min-width: 768px) {
-  .table td, .table th {
+  .table td,
+  .table th {
     padding: 10px 20px;
     height: 60px;
   }
 }
 
+
 /***** Forms *****/
+
 .form {
   max-width: 650px;
 }
@@ -400,7 +443,9 @@ ul {
   color: darken($color_4, 20%);
 }
 
+
 /***** Header *****/
+
 .header {
   max-width: 1160px;
   margin: 0 auto;
@@ -469,7 +514,9 @@ ul {
   padding: 0 0 0 20px;
 }
 
-.nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
+.nav-wrapper a:hover,
+.nav-wrapper a:focus,
+.nav-wrapper a:active {
   background-color: transparent;
   color: $color_4;
   text-decoration: underline;
@@ -496,7 +543,9 @@ ul {
   margin-right: 0;
 }
 
+
 /***** User info in header *****/
+
 .user-info {
   display: inline-block;
 }
@@ -549,7 +598,9 @@ ul {
   text-decoration: underline;
 }
 
+
 /***** User avatar *****/
+
 .user-avatar {
   height: 25px;
   width: 25px;
@@ -584,7 +635,9 @@ ul {
   width: 14px;
 }
 
+
 /***** Footer *****/
+
 .footer {
   border-top: 1px solid #ddd;
   margin-top: 60px;
@@ -616,7 +669,9 @@ ul {
   font-weight: 300;
 }
 
+
 /***** Breadcrumbs *****/
+
 .breadcrumbs {
   margin: 0 0 15px 0;
   padding: 0;
@@ -647,7 +702,9 @@ ul {
   color: $color_4;
 }
 
+
 /***** Search field *****/
+
 .search {
   position: relative;
 }
@@ -695,7 +752,9 @@ ul {
   border: 1px solid #fff;
 }
 
+
 /***** Hero component *****/
+
 .hero {
   background-image: url($homepage_background_image);
   background-position: center;
@@ -793,8 +852,12 @@ ul {
   font-size: 15px;
 }
 
+
 /***** Blocks *****/
+
+
 /* Used in Homepage#categories and Community#topics */
+
 .blocks-list {
   display: flex;
   flex-wrap: wrap;
@@ -829,11 +892,15 @@ ul {
   }
 }
 
-.blocks-item:hover, .blocks-item:focus, .blocks-item:active {
+.blocks-item:hover,
+.blocks-item:focus,
+.blocks-item:active {
   background-color: $color_1;
 }
 
-.blocks-item:hover *, .blocks-item:focus *, .blocks-item:active * {
+.blocks-item:hover *,
+.blocks-item:focus *,
+.blocks-item:active * {
   color: $color_2;
   text-decoration: none;
 }
@@ -859,7 +926,9 @@ ul {
   padding: 20px 30px;
 }
 
-.blocks-item-link:hover, .blocks-item-link:focus, .blocks-item-link:active {
+.blocks-item-link:hover,
+.blocks-item-link:focus,
+.blocks-item-link:active {
   text-decoration: none;
 }
 
@@ -876,7 +945,9 @@ ul {
   margin-top: 10px;
 }
 
+
 /***** Homepage *****/
+
 .section {
   margin-bottom: 40px;
 }
@@ -892,7 +963,9 @@ ul {
   text-align: center;
 }
 
+
 /***** Promoted articles *****/
+
 .promoted-articles {
   display: flex;
   flex-direction: column;
@@ -943,7 +1016,9 @@ ul {
   }
 }
 
+
 /***** Community section in homepage *****/
+
 .community {
   text-align: center;
 }
@@ -962,7 +1037,9 @@ ul {
   padding: 30px 0;
 }
 
+
 /***** Recent activity *****/
+
 .recent-activity-header {
   margin-bottom: 10px;
   text-align: center;
@@ -982,7 +1059,8 @@ ul {
   font-size: 16px;
 }
 
-.recent-activity-item-parent, .recent-activity-item-link {
+.recent-activity-item-parent,
+.recent-activity-item-link {
   margin: 6px 0;
   color: $color_3;
   display: inline-block;
@@ -990,7 +1068,8 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .recent-activity-item-parent, .recent-activity-item-link {
+  .recent-activity-item-parent,
+  .recent-activity-item-link {
     width: 70%;
     margin: 0;
   }
@@ -1016,7 +1095,8 @@ ul {
   }
 }
 
-.recent-activity-item-time, .recent-activity-item-comment {
+.recent-activity-item-time,
+.recent-activity-item-comment {
   color: lighten($color_3, 20%);
   display: inline-block;
   font-size: 13px;
@@ -1052,7 +1132,9 @@ ul {
   padding-top: 15px;
 }
 
+
 /***** Category pages *****/
+
 .category-container {
   display: flex;
   justify-content: flex-end;
@@ -1124,7 +1206,9 @@ ul {
   font-size: 18px;
 }
 
+
 /***** Section pages *****/
+
 .section-container {
   display: flex;
   justify-content: flex-end;
@@ -1144,7 +1228,9 @@ ul {
   display: none;
 }
 
+
 /***** Article *****/
+
 .article {
   /*
   * The article grid is defined this way to optimize readability:
@@ -1237,20 +1323,25 @@ ul {
   max-width: 100%;
 }
 
-.article-body ul, .article-body ol {
+.article-body ul,
+.article-body ol {
   padding-left: 20px;
   list-style-position: outside;
   margin: 20px 0 20px 20px;
 }
 
-[dir="rtl"] .article-body ul, [dir="rtl"] .article-body ol {
+[dir="rtl"] .article-body ul,
+[dir="rtl"] .article-body ol {
   padding-right: 20px;
   padding-left: 0;
   margin-left: 0;
   margin-right: 20px;
 }
 
-.article-body ul > ul, .article-body ol > ol, .article-body ol > ul, .article-body ul > ol {
+.article-body ul > ul,
+.article-body ol > ol,
+.article-body ol > ul,
+.article-body ul > ol {
   margin: 0;
 }
 
@@ -1394,7 +1485,8 @@ ul {
   /* Yes/No label*/
 }
 
-.article-vote:focus, .article-vote:active {
+.article-vote:focus,
+.article-vote:active {
   background-color: transparent;
   color: $color_1;
 }
@@ -1403,7 +1495,10 @@ ul {
   background-color: $color_1;
 }
 
-.article-vote:hover::before, .article-vote:hover::after, .article-vote[aria-selected="true"]::before, .article-vote[aria-selected="true"]::after {
+.article-vote:hover::before,
+.article-vote:hover::after,
+.article-vote[aria-selected="true"]::before,
+.article-vote[aria-selected="true"]::after {
   color: $color_2;
 }
 
@@ -1436,7 +1531,8 @@ ul {
   padding: 20px 0;
 }
 
-.article-return-to-top a:hover, .article-return-to-top a:focus {
+.article-return-to-top a:hover,
+.article-return-to-top a:focus {
   text-decoration: none;
 }
 
@@ -1474,7 +1570,8 @@ ul {
   padding: 10px;
 }
 
-.sidenav-item.current-article, .sidenav-item:hover {
+.sidenav-item.current-article,
+.sidenav-item:hover {
   background-color: $color_1;
   color: $color_2;
   text-decoration: none;
@@ -1491,8 +1588,12 @@ ul {
   margin-bottom: 15px;
 }
 
+
 /***** Attachments *****/
+
+
 /* Styles attachments inside posts, articles and comments */
+
 .attachments .attachment-item {
   padding-left: 20px;
   position: relative;
@@ -1526,13 +1627,16 @@ ul {
   color: lighten($color_3, 20%);
 }
 
+
 /***** Social share links *****/
+
 .share {
   padding: 0;
   white-space: nowrap;
 }
 
-.share li, .share a {
+.share li,
+.share a {
   display: inline-block;
 }
 
@@ -1576,8 +1680,12 @@ ul {
   content: "\e902";
 }
 
+
 /***** Comments *****/
+
+
 /* Styles comments inside articles, posts and requests */
+
 .comment {
   border-bottom: 1px solid #ddd;
   padding: 20px 0;
@@ -1774,20 +1882,25 @@ ul {
   max-width: 100%;
 }
 
-.comment-body ul, .comment-body ol {
+.comment-body ul,
+.comment-body ol {
   padding-left: 20px;
   list-style-position: outside;
   margin: 20px 0 20px 20px;
 }
 
-[dir="rtl"] .comment-body ul, [dir="rtl"] .comment-body ol {
+[dir="rtl"] .comment-body ul,
+[dir="rtl"] .comment-body ol {
   padding-right: 20px;
   padding-left: 0;
   margin-left: 0;
   margin-right: 20px;
 }
 
-.comment-body ul > ul, .comment-body ol > ol, .comment-body ol > ul, .comment-body ul > ol {
+.comment-body ul > ul,
+.comment-body ol > ol,
+.comment-body ol > ul,
+.comment-body ul > ol {
   margin: 0;
 }
 
@@ -1827,8 +1940,12 @@ ul {
   display: inline-block;
 }
 
+
 /***** Vote *****/
+
+
 /* Used in article comments, post comments and post */
+
 .vote {
   display: inline-block;
   text-align: center;
@@ -1839,7 +1956,9 @@ ul {
   outline: none;
 }
 
-.vote a:active, .vote a:hover, .vote a:focus {
+.vote a:active,
+.vote a:hover,
+.vote a:focus {
   text-decoration: none;
 }
 
@@ -1859,7 +1978,8 @@ ul {
   color: $color_1;
 }
 
-.vote-up::before, .vote-down::before {
+.vote-up::before,
+.vote-down::before {
   color: lighten($color_3, 20%);
   font-size: 24px;
 }
@@ -1880,8 +2000,12 @@ ul {
   color: darken($color_1, 20%);
 }
 
+
 /***** Actions *****/
+
+
 /* Styles admin and en user actions(edit, delete, change status) in comments and posts */
+
 .actions {
   text-align: center;
   flex-shrink: 0;
@@ -1893,7 +2017,9 @@ ul {
   margin: 15px 0;
 }
 
-.actions .dropdown-toggle:hover::before, .actions .dropdown-toggle:focus::before, .actions .dropdown-toggle:active::before {
+.actions .dropdown-toggle:hover::before,
+.actions .dropdown-toggle:focus::before,
+.actions .dropdown-toggle:active::before {
   background-color: darken($color_5, 3%);
 }
 
@@ -1908,7 +2034,9 @@ ul {
   padding: 5px;
 }
 
+
 /***** Community *****/
+
 .community-hero {
   background-image: url($community_background_image);
   margin-bottom: 10px;
@@ -1919,7 +2047,8 @@ ul {
   text-align: center;
 }
 
-.community-featured-posts, .community-activity {
+.community-featured-posts,
+.community-activity {
   padding-top: 40px;
   width: 100%;
 }
@@ -1942,7 +2071,9 @@ ul {
   }
 }
 
+
 /* Community topics grid */
+
 .topics {
   max-width: none;
   width: 100%;
@@ -1953,7 +2084,9 @@ ul {
   margin-top: 20px;
 }
 
+
 /* Community topic page */
+
 .topic-header {
   border-bottom: 1px solid #ddd;
   font-size: 13px;
@@ -1985,7 +2118,9 @@ ul {
   margin-bottom: 20px;
 }
 
+
 /* Topic, post and user follow button */
+
 .community-follow {
   margin-bottom: 10px;
   width: 100%;
@@ -2019,7 +2154,8 @@ ul {
   background-color: $color_1;
 }
 
-.community-follow [role="button"]:hover::after, .community-follow [role="button"]:focus::after {
+.community-follow [role="button"]:hover::after,
+.community-follow [role="button"]:focus::after {
   border-color: $color_2;
   color: $color_2;
 }
@@ -2064,8 +2200,12 @@ ul {
   padding: 0 10px 0 0;
 }
 
+
 /***** Striped list *****/
+
+
 /* Used in community posts list and requests list */
+
 .striped-list {
   padding: 0;
 }
@@ -2096,7 +2236,9 @@ ul {
   margin-right: 5px;
 }
 
-.striped-list-title:hover, .striped-list-title:focus, .striped-list-title:active {
+.striped-list-title:hover,
+.striped-list-title:focus,
+.striped-list-title:active {
   text-decoration: underline;
 }
 
@@ -2153,8 +2295,12 @@ ul {
   }
 }
 
+
 /***** Status labels *****/
+
+
 /* Styles labels used in posts, articles and requests */
+
 .status-label {
   background-color: #1eb848;
   border-radius: 4px;
@@ -2167,11 +2313,15 @@ ul {
   display: inline-block;
 }
 
-.status-label:hover, .status-label:active, .status-label:focus {
+.status-label:hover,
+.status-label:active,
+.status-label:focus {
   text-decoration: none;
 }
 
-.status-label-pinned, .status-label-featured, .status-label-official {
+.status-label-pinned,
+.status-label-featured,
+.status-label-official {
   background-color: $color_1;
 }
 
@@ -2198,7 +2348,8 @@ ul {
   right: auto;
 }
 
-.status-label-pending, .status-label-not-planned {
+.status-label-pending,
+.status-label-not-planned {
   background-color: #eee;
   color: lighten($color_3, 20%);
 }
@@ -2227,16 +2378,24 @@ ul {
   background-color: #000;
 }
 
-.status-label-open, .status-label-closed, .status-label-solved, .status-label-new, .status-label-hold {
+.status-label-open,
+.status-label-closed,
+.status-label-solved,
+.status-label-new,
+.status-label-hold {
   text-transform: lowercase;
 }
 
+
 /***** Post *****/
+
+
 /*
 * The post grid is defined this way:
 * Content | Sidebar
 * 70%     | 30%
 */
+
 .post {
   flex: 1;
   margin-bottom: 10px;
@@ -2357,20 +2516,25 @@ ul {
   max-width: 100%;
 }
 
-.post-body ul, .post-body ol {
+.post-body ul,
+.post-body ol {
   padding-left: 20px;
   list-style-position: outside;
   margin: 20px 0 20px 20px;
 }
 
-[dir="rtl"] .post-body ul, [dir="rtl"] .post-body ol {
+[dir="rtl"] .post-body ul,
+[dir="rtl"] .post-body ol {
   padding-right: 20px;
   padding-left: 0;
   margin-left: 0;
   margin-right: 20px;
 }
 
-.post-body ul > ul, .post-body ol > ol, .post-body ol > ul, .post-body ul > ol {
+.post-body ul > ul,
+.post-body ol > ol,
+.post-body ol > ul,
+.post-body ul > ol {
   margin: 0;
 }
 
@@ -2470,7 +2634,9 @@ ul {
   }
 }
 
+
 /* Navigation element that collapses on mobile */
+
 .collapsible-nav {
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd;
@@ -2581,7 +2747,9 @@ ul {
   content: "\2715";
 }
 
+
 /* Sidebar navigation that collapses on mobile */
+
 .collapsible-sidebar {
   flex: 1;
   max-height: 45px;
@@ -2635,7 +2803,9 @@ ul {
   right: auto;
 }
 
+
 /***** My activities *****/
+
 .my-activities-nav {
   background-color: darken($color_5, 5%);
   border: 0;
@@ -2709,12 +2879,14 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .my-activities-table td:not(:first-child) {
+  .my-activities-table td:not(: first-child) {
     display: table-cell;
   }
 }
 
+
 /* Requests table */
+
 .requests-search {
   width: 100%;
 }
@@ -2796,8 +2968,8 @@ ul {
   .requests-table-toolbar .organization-unsubscribe {
     margin-left: 10px;
   }
-  [dir="rtl"] .requests-table-toolbar .organization-subscribe, [dir="rtl"]
-  .requests-table-toolbar .organization-unsubscribe {
+  [dir="rtl"] .requests-table-toolbar .organization-subscribe,
+  [dir="rtl"] .requests-table-toolbar .organization-unsubscribe {
     margin: 0 10px 0 0;
   }
 }
@@ -2867,7 +3039,9 @@ ul {
   font-size: 10px;
 }
 
+
 /* Following table */
+
 .subscriptions-unsubscribe a {
   background: $color_1;
   border-radius: 4px;
@@ -2915,7 +3089,9 @@ ul {
   vertical-align: middle;
 }
 
+
 /* Contributions table */
+
 .contributions-table td:last-child {
   color: lighten($color_3, 20%);
   font-size: 13px;
@@ -2934,7 +3110,9 @@ ul {
   color: lighten($color_3, 20%);
 }
 
+
 /***** Request *****/
+
 .request-container {
   display: flex;
   flex-direction: column;
@@ -2968,7 +3146,8 @@ ul {
   order: 1;
 }
 
-.request-main .comment-fields, .request-main .request-submit-comment {
+.request-main .comment-fields,
+.request-main .request-submit-comment {
   display: none;
 }
 
@@ -3099,7 +3278,8 @@ ul {
   border: 0;
 }
 
-.request-details dt, .request-details dd {
+.request-details dt,
+.request-details dd {
   display: inline-block;
   vertical-align: top;
   font-size: 13px;
@@ -3126,7 +3306,8 @@ ul {
   display: inline-block;
 }
 
-.request-attachments dt, .request-attachments dd {
+.request-attachments dt,
+.request-attachments dd {
   width: 100%;
 }
 
@@ -3142,7 +3323,9 @@ ul {
   padding-top: 20px;
 }
 
+
 /***** Pagination *****/
+
 .pagination {
   margin: 20px 0;
   text-align: center;
@@ -3175,19 +3358,22 @@ ul {
   background-color: #f3f3f3;
 }
 
-.pagination li:hover:not(.pagination-current) span, .pagination li:hover:not(.pagination-current) a {
+.pagination li:hover:not(.pagination-current) span,
+.pagination li:hover:not(.pagination-current) a {
   color: $color_3;
   text-decoration: none;
 }
 
-.pagination a, .pagination span {
+.pagination a,
+.pagination span {
   font-size: 15px;
   color: lighten($color_3, 20%);
   padding: 10px 12px;
 }
 
 @media (min-width: 768px) {
-  .pagination a, .pagination span {
+  .pagination a,
+  .pagination span {
     font-size: 13px;
     padding: 5px 12px;
   }
@@ -3197,7 +3383,8 @@ ul {
   background-color: $color_1;
 }
 
-.pagination-current a, .pagination-current span {
+.pagination-current a,
+.pagination-current span {
   color: $color_2;
 }
 
@@ -3217,7 +3404,9 @@ ul {
   border-radius: 3px 0 0 3px;
 }
 
+
 /***** Metadata *****/
+
 .meta-group {
   display: block;
 }
@@ -3237,7 +3426,9 @@ ul {
   margin: 0 5px;
 }
 
+
 /***** Icons *****/
+
 [class^="icon-"]::before,
 [class*=" icon-"]::before,
 .icon,
@@ -3358,7 +3549,9 @@ ul {
   content: "\2714";
 }
 
+
 /* User Profiles */
+
 .profile-header {
   padding: 30px 0;
   background-color: darken($color_5, 3%);
@@ -3440,11 +3633,11 @@ ul {
     margin-left: 0;
     margin-right: 10px;
   }
-  .profile-header .options > :not(:last-child) {
+  .profile-header .options >:not(:last-child) {
     margin-bottom: 0;
     margin-right: 10px;
   }
-  [dir="rtl"] .profile-header .options > :not(:last-child) {
+  [dir="rtl"] .profile-header .options >:not(:last-child) {
     margin-left: 10px;
     margin-right: 0;
   }
@@ -3520,7 +3713,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .profile-stats-activity .stat:not(:last-child) {
+  .profile-stats-activity .stat:not(: last-child) {
     margin-right: 40px;
   }
   [dir="rtl"] .profile-stats-activity .stat:not(:last-child) {
@@ -3575,7 +3768,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .profile-stats-counters .stat:not(:last-child) {
+  .profile-stats-counters .stat:not(: last-child) {
     margin-bottom: 15px;
   }
 }
@@ -3834,7 +4027,7 @@ ul {
 }
 
 @media (min-width: 768px) {
-  .profile-activity:not(:last-child) {
+  .profile-activity:not(: last-child) {
     border-left: 1px solid #ddd;
   }
   [dir="rtl"] .profile-activity:not(:last-child) {
@@ -3955,7 +4148,9 @@ ul {
   line-height: 35px;
 }
 
+
 /***** Search results *****/
+
 .search-results {
   display: flex;
   flex-direction: column;
@@ -3996,7 +4191,8 @@ ul {
   margin-top: 15px;
 }
 
-.search-result-votes, .search-result-meta-count {
+.search-result-votes,
+.search-result-meta-count {
   color: lighten($color_3, 20%);
   display: inline-block;
   font-size: 13px;
@@ -4005,23 +4201,28 @@ ul {
   position: relative;
 }
 
-.search-result-votes::before, .search-result-meta-count::before {
+.search-result-votes::before,
+.search-result-meta-count::before {
   color: $color_1;
 }
 
-[dir="ltr"] .search-result-votes, [dir="ltr"] .search-result-meta-count {
+[dir="ltr"] .search-result-votes,
+[dir="ltr"] .search-result-meta-count {
   margin-left: 5px;
 }
 
-[dir="ltr"] .search-result-votes::before, [dir="ltr"] .search-result-meta-count::before {
+[dir="ltr"] .search-result-votes::before,
+[dir="ltr"] .search-result-meta-count::before {
   margin-right: 3px;
 }
 
-[dir="rtl"] .search-result-votes, [dir="rtl"] .search-result-meta-count {
+[dir="rtl"] .search-result-votes,
+[dir="rtl"] .search-result-meta-count {
   margin-right: 5px;
 }
 
-[dir="rtl"] .search-result-votes::before, [dir="rtl"] .search-result-meta-count::before {
+[dir="rtl"] .search-result-votes::before,
+[dir="rtl"] .search-result-meta-count::before {
   margin-left: 3px;
 }
 

@@ -12,7 +12,7 @@ $(document).ready(function() {
 
   // show form controls when the textarea receives focus or backbutton is used and value exists
   var $commentContainerTextarea = $(".comment-container textarea"),
-  $commentContainerFormControls = $(".comment-form-controls, .comment-ccs");
+    $commentContainerFormControls = $(".comment-form-controls, .comment-ccs");
 
   $commentContainerTextarea.one("focus", function() {
     $commentContainerFormControls.show();
@@ -39,7 +39,7 @@ $(document).ready(function() {
     $requestMarkAsSolvedCheckbox = $(".request-container .comment-container input[type=checkbox]"),
     $requestCommentSubmitButton = $(".request-container .comment-container input[type=submit]");
 
-  $requestMarkAsSolvedButton.on("click", function () {
+  $requestMarkAsSolvedButton.on("click", function() {
     $requestMarkAsSolvedCheckbox.attr("checked", true);
     $requestCommentSubmitButton.prop("disabled", true);
     $(this).attr("data-disabled", true).closest("form").submit();
@@ -64,10 +64,9 @@ $(document).ready(function() {
   }
 
   // Submit requests filter form in the request list page
-  $("#request-status-select, #request-organization-select")
-    .on("change", function() {
-      search();
-    });
+  $("#request-status-select, #request-organization-select").on("change", function() {
+    search();
+  });
 
   // Submit requests filter form in the request list page
   $("#quick-search").on("keypress", function(e) {
@@ -80,7 +79,7 @@ $(document).ready(function() {
     window.location.search = $.param({
       query: $("#quick-search").val(),
       status: $("#request-status-select").val(),
-      organization_id: $("#request-organization-select").val()
+      organization_id: $("#request-organization-select").val(),
     });
   }
 
