@@ -1,10 +1,8 @@
 <div class="container-divider"></div>
 <div class="container">
   <nav class="sub-nav">
-    {{breadcrumbs}}
-    {{search submit=false}}
+    {{breadcrumbs}} {{search submit=false}}
   </nav>
-
   <div class="section-container">
     <section class="section-content">
       <header class="page-header">
@@ -14,13 +12,10 @@
             <span class="icon-lock" title="{{t 'internal'}}"></span>
           {{/if}}
         </h1>
-        {{subscribe}}
         {{#if section.description}}
           <p class="page-header-description">{{section.description}}</p>
         {{/if}}
       </header>
-
-
       {{#if section.articles}}
         <ul class="article-list">
           {{#each section.articles}}
@@ -37,7 +32,6 @@
           <a href="{{section.url}}">{{t 'empty'}}</a>
         </i>
       {{/if}}
-
       {{pagination}}
     </section>
   </div>
