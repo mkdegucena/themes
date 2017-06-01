@@ -4,6 +4,14 @@
 
 $(document).ready(function() {
 
+  $(".tab").click(function() {
+    var $tab = $(this), categoryId = $tab.data("id");
+
+    $(".tab.active, .tab-content.active").removeClass("active");
+    $tab.addClass("active");
+    $("#" + categoryId).addClass("active");
+  });
+
   // social share popups
   $(".share a").click(function(e) {
     e.preventDefault();
