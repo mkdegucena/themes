@@ -3,39 +3,45 @@
     {{search submit=false instant=true class='search search-full'}}
   </div>
 </section>
-
 <div class="container">
   <section class="section knowledge-base">
+    <div class="tabs">
+      {{#each categories}}
+        <h3 class="tab" data-id="{{id}}">
+          {{name}}
+        </h3>
+      {{/each}}
+    </div>
     <section class="categories blocks">
-      <ul class="blocks-list">
-        {{#each categories}}
-          {{#if ../has_multiple_categories}}
-            <li class="blocks-item">
-              <a href='{{url}}' class="blocks-item-link">
-                <h4 class="blocks-item-title">{{name}}</h4>
-                <p class="blocks-item-description">{{excerpt description}}</p>
-              </a>
-            </li>
-          {{else}}
+      {{#each categories}}
+        <div id="{{id}}" class="tab-content">
+          <ul class="blocks-list">
             {{#each sections}}
               <li class="blocks-item {{#if internal}}blocks-item-internal{{/if}}">
-                <a href='{{url}}' class="blocks-item-link">
-                  <h4 class="blocks-item-title">
-                    {{name}}
-                    {{#if internal}}
-                      <span class="icon-lock" title="{{t 'internal'}}"></span>
-                    {{/if}}
-                  </h4>
-                  <p class="blocks-item-description">{{excerpt description}}</p>
-                </a>
+                <h3 class="blocks-item-title">
+                  {{name}}
+                  {{#if internal}}
+                    <span class="icon-lock" title="{{t 'internal'}}"></span>
+                  {{/if}}
+                </h3>
+                <ul class="article-list">
+                  {{#each articles}}
+                    <li>
+                      <a href="{{url}}" class="article-item">{{title}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+                <a href="{{url}}" class="see-all">See all articles</a>
               </li>
             {{/each}}
-          {{/if}}
-        {{/each}}
-      </ul>
+            <li class="blocks-item"></li>
+            <li class="blocks-item"></li>
+            <li class="blocks-item"></li>
+          </ul>
+        </div>
+      {{/each}}
       {{pagination}}
     </section>
-
     {{#if promoted_articles}}
       <section class="articles">
         <h3>{{t 'promoted_articles'}}</h3>
