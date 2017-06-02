@@ -6,10 +6,17 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
+  min-height: 100%;
+  min-width: 320px;
   background-color: $color_5;
   color: $color_3;
-  font-family: $font_2;
+  font-family: 'Open Sans', $font_2;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
@@ -22,13 +29,18 @@ body {
   }
 }
 
+main {
+  padding-bottom: 80px;
+  /* Should be equal to height of footer */
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: $font_1;
+  font-family: 'Ubuntu', $font_1;
   font-weight: 400;
   margin-top: 0;
 }
@@ -43,7 +55,7 @@ h2 {
 
 h3 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 h4 {
@@ -447,6 +459,10 @@ input[type="submit"][disabled] {
 /***** Header *****/
 
 .header {
+  background: $color_1;
+}
+
+.header-inner {
   max-width: 1160px;
   margin: 0 auto;
   padding: 0 5%;
@@ -458,7 +474,7 @@ input[type="submit"][disabled] {
 }
 
 @media (min-width: 1160px) {
-  .header {
+  .header-inner {
     padding: 0;
     width: 90%;
   }
@@ -497,11 +513,11 @@ input[type="submit"][disabled] {
 
 .nav-wrapper a {
   border: 0;
-  color: $color_4;
+  color: #FFF;
   display: none;
-  font-size: 14px;
   padding: 0 20px 0 0;
   width: auto;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -518,7 +534,7 @@ input[type="submit"][disabled] {
 .nav-wrapper a:focus,
 .nav-wrapper a:active {
   background-color: transparent;
-  color: $color_4;
+  color: #FFF;
   text-decoration: underline;
 }
 
@@ -529,7 +545,7 @@ input[type="submit"][disabled] {
 .nav-wrapper .icon-menu {
   display: inline-block;
   margin-right: 10px;
-  color: $color_4;
+  color: #FFF;
 }
 
 @media (min-width: 768px) {
@@ -541,6 +557,10 @@ input[type="submit"][disabled] {
 [dir="rtl"] .nav-wrapper .icon-menu {
   margin-left: 10px;
   margin-right: 0;
+}
+
+.dropdown-menu [role="menuitem"] {
+  font-weight: 400;
 }
 
 
@@ -562,19 +582,19 @@ input[type="submit"][disabled] {
 
 .user-info > [role="button"] {
   border: 0;
-  color: $color_4;
+  color: #FFF;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
 }
 
 .user-info > [role="button"]:hover {
-  color: $color_4;
+  color: #FFF;
   background-color: transparent;
 }
 
 .user-info > [role="button"]::after {
-  color: $color_4;
+  color: #FFF;
   padding-right: 15px;
 }
 
@@ -585,7 +605,8 @@ input[type="submit"][disabled] {
 
 #user #user-name {
   display: none;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 15px;
 }
 
 @media (min-width: 768px) {
@@ -602,10 +623,10 @@ input[type="submit"][disabled] {
 /***** User avatar *****/
 
 .user-avatar {
+  display: none;
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  display: inline-block;
   vertical-align: middle;
 }
 
@@ -639,13 +660,20 @@ input[type="submit"][disabled] {
 /***** Footer *****/
 
 .footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  background: #393E46;
   border-top: 1px solid #ddd;
   margin-top: 60px;
   padding: 30px 0;
+  color: #FFF;
 }
 
 .footer a {
-  color: lighten($color_3, 20%);
+  color: #FFF;
 }
 
 .footer-inner {
@@ -867,7 +895,6 @@ input[type="submit"][disabled] {
   margin: 0;
   padding: 0 20px 5px;
   cursor: pointer;
-  font-size: 22px;
 }
 
 .tab.active {
@@ -895,9 +922,15 @@ input[type="submit"][disabled] {
   border: none;
 }
 
+.blocks-list .article-item {
+  line-height: 1.5;
+  margin-bottom: 2px;
+}
+
 .see-all {
   margin-top: 10px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 
@@ -969,8 +1002,7 @@ input[type="submit"][disabled] {
 
 .blocks-item-title {
   margin-bottom: 0;
-  padding: 20px 20px 10px;
-  font-weight: 600;
+  padding: 20px;
 }
 
 .blocks-item-description {
