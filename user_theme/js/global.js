@@ -6,7 +6,8 @@ $(document).ready(function() {
   $(".tab:first-child, .tab-content:first-child").addClass("active");
 
   $(".tab").click(function() {
-    var $tab = $(this), categoryId = $tab.data("id");
+    var $tab = $(this),
+      categoryId = $tab.data("id");
 
     $(".tab.active, .tab-content.active").removeClass("active");
     $tab.addClass("active");
