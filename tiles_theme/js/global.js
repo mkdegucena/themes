@@ -1,3 +1,33 @@
+var HC = {};
+
+HC.SETTINGS = {
+
+  assetRoot: "//p5.zdassets.com/hc/theme_assets/1868444/115000213048/",
+
+  icons: {
+    "115001339528": "rocket.png", // Getting Started
+    "115001344487": "tools.png", // Knowledge Base
+    "community": "chat.png", // Community
+  },
+}
+
+Vue.options.delimiters = ['{[{', '}]}'];
+
+// Icon image component
+Vue.component('icon', {
+  template: '<img :src="iconUrl" class="icon" />',
+  props: ['id'],
+  computed: {
+    iconUrl: function() {
+      return HC.SETTINGS.assetRoot + HC.SETTINGS.icons[this.id];
+    }
+  }
+});
+
+
+
+
+
 /*
  * jQuery v1.9.1 included
  */

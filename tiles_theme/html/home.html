@@ -18,7 +18,8 @@
           {{#if ../has_multiple_categories}}
             <li class="blocks-item">
               <a href='{{url}}' class="blocks-item-link">
-                <h4 class="blocks-item-title">{{name}}</h4>
+                <icon :id="{{id}}"></icon>
+                <h1 class="blocks-item-title">{{name}}</h1>
                 <p class="blocks-item-description">{{excerpt description}}</p>
               </a>
             </li>
@@ -26,18 +27,26 @@
             {{#each sections}}
               <li class="blocks-item {{#if internal}}blocks-item-internal{{/if}}">
                 <a href='{{url}}' class="blocks-item-link">
-                  <h4 class="blocks-item-title">
+                  <icon :id="{{id}}"></icon>
+                  <h1 class="blocks-item-title">
                     {{name}}
                     {{#if internal}}
                       <span class="icon-lock" title="{{t 'internal'}}"></span>
                     {{/if}}
-                  </h4>
+                  </h1>
                   <p class="blocks-item-description">{{excerpt description}}</p>
                 </a>
               </li>
             {{/each}}
           {{/if}}
         {{/each}}
+        <li class="blocks-item">
+          <a href='{{page_path "community"}}' class="blocks-item-link">
+            <icon :id="'community'"></icon>
+            <h1 class="blocks-item-title">Community</h1>
+            <p class="blocks-item-description"></p>
+          </a>
+        </li>
       </ul>
       {{pagination}}
     </section>
