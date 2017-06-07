@@ -623,7 +623,6 @@ input[type="submit"][disabled] {
 /***** User avatar *****/
 
 .user-avatar {
-  display: none;
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -654,6 +653,10 @@ input[type="submit"][disabled] {
   right: -2px;
   text-align: center;
   width: 14px;
+}
+
+.user-info .user-avatar {
+  display: none;
 }
 
 
