@@ -12,16 +12,15 @@
           <p class="page-header-description">{{category.description}}</p>
         {{/if}}
       </header>
-
       <div class="section-tree">
         {{#each sections}}
           <section class="section">
-            <h3 class="section-tree-title">
+            <h2 class="section-tree-title">
               <a href="{{url}}">{{name}}</a>
               {{#if internal}}
                 <span class="icon-lock" title="{{t 'internal'}}"></span>
               {{/if}}
-            </h3>
+            </h2>
             {{#if articles}}
               <ul class="article-list">
                 {{#each articles}}
@@ -41,11 +40,12 @@
               </i>
             {{/if}}
           </section>
-        {{else}}
-          <i class="category-empty">
-            <a href="{{category.url}}">{{t 'empty'}}</a>
-          </i>
+          {{else}}
+            <i class="category-empty">
+              <a href="{{category.url}}">{{t 'empty'}}</a>
+            </i>
         {{/each}}
+        <section class="section"></section>
       </div>
     </div>
   </div>
