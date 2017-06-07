@@ -458,7 +458,9 @@ input[type="submit"][disabled] {
 
 /***** Header *****/
 
-.header {}
+.header {
+  background: #444;
+}
 
 .header-inner {
   max-width: 1160px;
@@ -486,6 +488,7 @@ input[type="submit"][disabled] {
   display: inline-block;
   position: absolute;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -511,9 +514,9 @@ input[type="submit"][disabled] {
 
 .nav-wrapper a {
   border: 0;
-  color: $color_4;
+  color: #FFF;
   display: none;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0 20px 0 0;
   width: auto;
 }
@@ -532,7 +535,7 @@ input[type="submit"][disabled] {
 .nav-wrapper a:focus,
 .nav-wrapper a:active {
   background-color: transparent;
-  color: $color_4;
+  color: #FFF;
   text-decoration: underline;
 }
 
@@ -543,7 +546,7 @@ input[type="submit"][disabled] {
 .nav-wrapper .icon-menu {
   display: inline-block;
   margin-right: 10px;
-  color: $color_4;
+  color: #FFF;
 }
 
 @media (min-width: 768px) {
@@ -562,6 +565,7 @@ input[type="submit"][disabled] {
 
 .user-info {
   display: inline-block;
+  font-weight: 600;
 }
 
 .user-info .dropdown-toggle::after {
@@ -576,19 +580,19 @@ input[type="submit"][disabled] {
 
 .user-info > [role="button"] {
   border: 0;
-  color: $color_4;
+  color: #FFF;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
 }
 
 .user-info > [role="button"]:hover {
-  color: $color_4;
+  color: #FFF;
   background-color: transparent;
 }
 
 .user-info > [role="button"]::after {
-  color: $color_4;
+  color: #FFF;
   padding-right: 15px;
 }
 
@@ -599,7 +603,7 @@ input[type="submit"][disabled] {
 
 #user #user-name {
   display: none;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 @media (min-width: 768px) {
@@ -647,6 +651,10 @@ input[type="submit"][disabled] {
   right: -2px;
   text-align: center;
   width: 14px;
+}
+
+.user-info .user-avatar {
+  display: none;
 }
 
 
