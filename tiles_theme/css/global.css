@@ -30,7 +30,7 @@ body {
 }
 
 body > main {
-  padding-bottom: 200px;
+  padding-bottom: 300px;
 }
 
 h1,
@@ -660,18 +660,48 @@ input[type="submit"][disabled] {
 
 /***** Footer *****/
 
+.subfooter {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.subfooter h2 {
+  font-size: 26px;
+}
+
+.subfooter .submit-a-request {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #555;
+  border-radius: 2px;
+  font-weight: 500;
+  color: #444;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.subfooter .submit-a-request:hover {
+  background: #555;
+  color: #FFF;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
-  padding: 30px 0;
+  height: 275px;
   background: #f8f8f8
 }
 
 .footer a {
   color: lighten($color_3, 20%);
+}
+
+.footer-bottom {
+  padding: 30px 0;
+  background: #444;
 }
 
 .footer-inner {
