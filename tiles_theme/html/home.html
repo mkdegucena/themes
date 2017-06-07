@@ -51,11 +51,11 @@
       {{pagination}}
     </section>
     {{#if promoted_articles}}
-      <section class="articles">
-        <h3>{{t 'promoted_articles'}}</h3>
-        <ul class="article-list promoted-articles">
+      <section class="popular">
+        <h1>Popular Articles</h1>
+        <ul class="popular-articles">
           {{#each promoted_articles}}
-            <li class="promoted-articles-item">
+            <li class="popular-articles-item">
               <a href="{{url}}">
                 {{title}}
               </a>
