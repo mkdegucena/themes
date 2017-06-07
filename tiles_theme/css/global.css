@@ -660,32 +660,6 @@ input[type="submit"][disabled] {
 
 /***** Footer *****/
 
-.subfooter {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.subfooter h2 {
-  font-size: 26px;
-}
-
-.subfooter .submit-a-request {
-  display: inline-block;
-  padding: 10px 16px;
-  border: 1px solid #555;
-  border-radius: 2px;
-  font-weight: 500;
-  color: #444;
-  font-family: "Roboto Condensed";
-  font-size: 18px;
-  text-decoration: none;
-}
-
-.subfooter .submit-a-request:hover {
-  background: #555;
-  color: #FFF;
-}
-
 .footer {
   position: absolute;
   bottom: 0;
@@ -723,6 +697,42 @@ input[type="submit"][disabled] {
   color: lighten($color_3, 20%);
   display: inline-block;
   font-weight: 300;
+}
+
+.subfooter {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.subfooter h2 {
+  font-size: 26px;
+}
+
+.subfooter a {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px 16px;
+  border: 1px solid #555;
+  border-radius: 2px;
+  font-weight: 500;
+  color: #444;
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.subfooter a:hover {
+  background: #555;
+  color: #FFF;
+}
+
+.page-community .subfooter .submit-a-request,
+.subfooter .submit-a-post {
+  display: none;
+}
+
+.page-community .subfooter .submit-a-post {
+  display: inline-block;
 }
 
 .no-subfooter .subfooter {
