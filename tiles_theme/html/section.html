@@ -20,10 +20,7 @@
       {{#if section.articles}}
         <ul class="article-list">
           {{#each section.articles}}
-            <li class="article-list-item {{#if promoted}} article-promoted{{/if}}">
-              {{#if promoted}}
-                <span data-title="{{t 'promoted'}}" class="icon-star"></span>
-              {{/if}}
+            <li class="article-list-item">
               <a href="{{url}}" class="article-list-link">{{title}}</a>
             </li>
           {{/each}}
