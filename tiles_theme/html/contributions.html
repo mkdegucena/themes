@@ -7,7 +7,6 @@
     <li>{{link 'subscriptions'}}</li>
   </ul>
 </nav>
-
 <div class="container">
   <header class="my-activities-header">
     <h1>{{t 'contributions'}}</h1>
@@ -25,8 +24,6 @@
       </ul>
     </nav>
   </header>
-
-
   <div class="requests">
     {{#if contributions}}
       <table class="table my-activities-table contributions-table">
@@ -53,14 +50,15 @@
               <td>{{date created_at}}</td>
             </tr>
           {{/each}}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
     {{else}}
       <p class="no-activities">{{t 'no_contributions'}}</p>
     {{/if}}
   </div>
-
   {{pagination}}
-
-  </div>
 </div>
+</div>
+<script>
+$("body").addClass("no-subfooter");
+</script>

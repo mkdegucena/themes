@@ -7,12 +7,10 @@
     <li aria-selected=true>{{t 'following'}}</li>
   </ul>
 </nav>
-
 <div class="container">
   <header class="my-activities-header">
     <h1>{{t 'following'}}</h1>
   </header>
-
   <div class="my-activities-following-header">
     <span class="dropdown">
       <span class="dropdown-toggle">
@@ -27,7 +25,6 @@
       </span>
     </span>
   </div>
-
   <div class="requests">
     {{#if subscriptions}}
       <table class="table my-activities-table subscriptions-table">
@@ -57,10 +54,12 @@
           {{/each}}
         </tbody>
       </table>
-
-    {{pagination}}
+      {{pagination}}
     {{else}}
       <p class="no-activities">{{t 'not_following'}}</p>
     {{/if}}
   </div>
 </div>
+<script>
+$("body").addClass("no-subfooter");
+</script>

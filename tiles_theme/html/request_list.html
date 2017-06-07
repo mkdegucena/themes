@@ -5,7 +5,6 @@
     <li>{{link 'subscriptions'}}</li>
   </ul>
 </nav>
-
 <div class="container">
   <header class="my-activities-header">
     <h1>{{t 'my_requests'}}</h1>
@@ -23,28 +22,22 @@
       </ul>
     </nav>
   </header>
-
-  {{#form 'requests_filter' class='requests-table-toolbar'}}
+  {{#form 'requests_filter' class='requests-table-toolbar' }}
     <div class="search">
       {{input 'query' id='quick-search' type='search' class='requests-search'}}
     </div>
     {{#if help_center.multiple_organizations_enabled}}
       <div class="request-table-filter">
-        {{label 'organization' for='request-organization-select' class='request-filter request-filter-label'}}
-        {{select 'organization' id='request-organization-select' class='request-filter'}}
+        {{label 'organization' for='request-organization-select' class='request-filter request-filter-label'}} {{select 'organization' id='request-organization-select' class='request-filter'}}
       </div>
     {{/if}}
-
     <div class="request-table-filter">
       {{subscribe}}
     </div>
-
     <div class="request-table-filter">
-      {{label 'status' for='request-status-select' class='request-filter request-filter-label'}}
-      {{select 'status' id='request-status-select' class='request-filter'}}
+      {{label 'status' for='request-status-select' class='request-filter request-filter-label'}} {{select 'status' id='request-status-select' class='request-filter'}}
     </div>
   {{/form}}
-
   {{#if query}}
     <div class="requests-search-info meta-data">
       {{t 'requests_search_results_info' count=requests.length query=query}}
@@ -54,7 +47,6 @@
       <p class="no-activities">{{t 'no_requests'}}</p>
     {{/unless}}
   {{/if}}
-
   <div class="requests">
     {{#if requests}}
       <table class="table my-activities-table requests-table {{current_filter.identifier}}-requests">
@@ -64,18 +56,19 @@
             <th>{{t 'id'}}</th>
             <th>
               {{#is current_filter.identifier 'my'}}
-                {{#link 'requests' sort_by='created_at'}}{{t 'created'}}{{/link}}
-              {{else}}
-                {{t 'requester'}}
+                {{#link 'requests' sort_by='created_at' }}{{t 'created'}}{{/link}}
+    {{else}}
+      {{t 'requester'}}
               {{/is}}
             </th>
-            <th>{{#link 'requests' sort_by='updated_at'}}{{t 'last_activity'}}{{/link}}</th>
+            <th>
+              {{#link 'requests' sort_by='updated_at' }}{{t 'last_activity'}}{{/link}}
+            </th>
             <th>
               {{t 'status'}}
             </th>
           </tr>
         </thead>
-
         <tbody>
           {{#each requests}}
             <tr {{#is status 'closed'}} class="request-closed" {{/is}}>
@@ -87,7 +80,6 @@
                     {{excerpt description characters=50}}
                   {{/if}}
                 </a>
-
                 <!-- Visible on mobile -->
                 <div class="requests-table-meta meta-group">
                   <span class="meta-data">#{{id}}</span>
@@ -101,8 +93,8 @@
               <td>
                 {{#is ../current_filter.identifier 'my'}}
                   {{date created_at timeago=true}}
-                {{else}}
-                  {{requester.name}}
+    {{else}}
+      {{requester.name}}
                 {{/is}}
               </td>
               <td>{{date updated_at timeago=true}}</td>
@@ -117,6 +109,8 @@
       </table>
     {{/if}}
   </div>
-
   {{pagination}}
 </div>
+<script>
+$("body").addClass("no-subfooter");
+</script>

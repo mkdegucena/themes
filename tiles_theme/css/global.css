@@ -725,6 +725,18 @@ input[type="submit"][disabled] {
   font-weight: 300;
 }
 
+.no-subfooter .subfooter {
+  display: none;
+}
+
+.no-subfooter .footer {
+  height: 60px;
+}
+
+.no-subfooter main {
+  padding-bottom: 100px;
+}
+
 
 /***** Breadcrumbs *****/
 
