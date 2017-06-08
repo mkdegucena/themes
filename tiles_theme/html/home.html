@@ -22,18 +22,18 @@
                 <h1 class="blocks-item-title">{{name}}</h1>
                 <p class="blocks-item-description">{{excerpt description}}</p>
               </a>
+              {{#each sections}}
+                {{#each articles}}
+                  <a href='{{url}}' class="article-link"></a>
+                {{/each}}
+              {{/each}}
             </li>
           {{else}}
             {{#each sections}}
-              <li class="blocks-item {{#if internal}}blocks-item-internal{{/if}}">
+              <li class="blocks-item">
                 <a href='{{url}}' class="blocks-item-link">
                   <icon :id="{{id}}"></icon>
-                  <h1 class="blocks-item-title">
-                    {{name}}
-                    {{#if internal}}
-                      <span class="icon-lock" title="{{t 'internal'}}"></span>
-                    {{/if}}
-                  </h1>
+                  <h1 class="blocks-item-title">{{name}}</h1>
                   <p class="blocks-item-description">{{excerpt description}}</p>
                 </a>
               </li>

@@ -1029,7 +1029,7 @@ input[type="submit"][disabled] {
 }
 
 .blocks-item-title {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 0;
   font-weight: 600;
   font-size: 26px;
@@ -1047,6 +1047,7 @@ input[type="submit"][disabled] {
 
 .blocks-item .icon {
   width: 150px;
+  margin-bottom: 20px;
 }
 
 
@@ -1295,7 +1296,7 @@ input[type="submit"][disabled] {
 
 .article-list-item {
   font-size: 16px;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 .article-list-item a {}
