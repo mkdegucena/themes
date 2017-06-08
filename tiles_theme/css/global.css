@@ -1061,6 +1061,10 @@ input[type="submit"][disabled] {
   margin-bottom: 20px;
 }
 
+.blocks-item .article-link {
+  display: none;
+}
+
 
 /***** Homepage *****/
 

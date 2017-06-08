@@ -2,6 +2,8 @@ var HC = {};
 
 HC.SETTINGS = {
 
+  tutorialCategory: 115001339528,
+
   assetRoot: "//p5.zdassets.com/hc/theme_assets/1868444/115000213048/",
 
   icons: {
@@ -25,7 +27,14 @@ Vue.component('icon', {
 });
 
 
+HC.Utils = {
+  getPageId: function(url) {
+    var links = url.split("/"),
+      result = links[links.length - 1];
 
+    return parseInt(result, 10) || null;
+  },
+}
 
 
 /*
@@ -33,6 +42,12 @@ Vue.component('icon', {
  */
 
 $(document).ready(function() {
+
+  // Redirect Getting Started category to first article in category
+  var $category = $(".knowledge-base .blocks-item[data-category='" + HC.SETTINGS.tutorialCategory + "']"),
+    $firstArticle = $category.find(".article-link").first();
+
+  if ($firstArticle) $category.find(".blocks-item-link").attr("href", $firstArticle.attr("href"));
 
   // social share popups
   $(".share a").click(function(e) {
