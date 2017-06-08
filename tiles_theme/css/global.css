@@ -929,7 +929,7 @@ input[type="submit"][disabled] {
   justify-content: space-between;
   margin-bottom: 30px;
   min-height: 50px;
-  padding: 20px 0;
+  padding: 20px 5%;
 }
 
 @media (min-width: 768px) {
@@ -939,18 +939,16 @@ input[type="submit"][disabled] {
   }
 }
 
-@media (min-width: 768px) {
-  .sub-nav input[type="search"] {
+@media (min-width: 1160px) {
+  .sub-nav .container {
+    padding: 20px 0;
+  }
+  .sub-nav .search {
     min-width: 300px;
   }
 }
 
-.sub-nav input[type="search"]::after {
-  font-size: 15px;
-}
-
 .sub-nav .search {
-  max-width: 450px;
   width: 100%;
 }
 
@@ -959,6 +957,19 @@ input[type="submit"][disabled] {
   width: 100%;
   border: 1px solid #DDD;
 }
+
+.sub-nav #query::after {
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  .sub-nav .search {
+    max-width: 450px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1160px) {}
 
 
 /***** Blocks *****/
