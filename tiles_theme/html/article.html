@@ -93,3 +93,19 @@
     </article>
   </div>
 </div>
+<script>
+$(".breadcrumbs li").each(function()
+{
+  var link = $(this).children("a"),
+    title = link.text(),
+    id = HC.Utils.getPageId(link.attr("href"));
+
+  if (id === HC.SETTINGS.tutorialCategory)
+  {
+    $(this).html(title);
+    $(".breadcrumbs li:last-child").remove();
+  }
+})
+
+$(".breadcrumbs").addClass("in");
+</script>

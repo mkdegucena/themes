@@ -751,8 +751,13 @@ input[type="submit"][disabled] {
 /***** Breadcrumbs *****/
 
 .breadcrumbs {
+  visibility: hidden;
   margin: 0 0 15px 0;
   padding: 0;
+}
+
+.breadcrumbs.in {
+  visibility: visible;
 }
 
 @media (min-width: 768px) {
@@ -1027,6 +1032,7 @@ input[type="submit"][disabled] {
   padding: 30px 20px;
   border-radius: 3px;
   border: 1px solid #f4f4f4;
+  outline: none;
 }
 
 .blocks-item-link:hover {

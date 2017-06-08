@@ -49,6 +49,9 @@ $(document).ready(function() {
 
   if ($firstArticle) $category.find(".blocks-item-link").attr("href", $firstArticle.attr("href"));
 
+
+  $(".breadcrumbs").addClass("in");
+
   // social share popups
   $(".share a").click(function(e) {
     e.preventDefault();
