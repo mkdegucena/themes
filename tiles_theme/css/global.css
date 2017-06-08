@@ -728,11 +728,11 @@ input[type="submit"][disabled] {
 
 .page-community .subfooter .submit-a-request,
 .subfooter .submit-a-post {
-  display: none;
+  visibility: hidden;
 }
 
 .page-community .subfooter .submit-a-post {
-  display: inline-block;
+  visibility: visible;
 }
 
 .no-subfooter .subfooter {
