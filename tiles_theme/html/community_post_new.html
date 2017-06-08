@@ -1,8 +1,9 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
+<nav class="sub-nav">
+  <div class="container">
     {{breadcrumbs}} {{search submit=false}}
-  </nav>
+  </div>
+</nav>
+<div class="container">
   <h1 class="form-header">
     {{t 'what_is_your_post_about'}}
   </h1>
@@ -37,3 +38,6 @@
     {{/form}}
   </div>
 </div>
+<script>
+$("body").addClass("no-subfooter");
+</script>

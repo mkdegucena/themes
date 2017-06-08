@@ -1,12 +1,12 @@
-<section class="section hero community-hero">
-  <div class="hero-inner">
-    {{search submit=false class='search search-full' scoped=true}}
+<nav class="sub-nav">
+  <div class="container">
+    {{breadcrumbs}} {{search submit=false}}
   </div>
-</section>
+</nav>
 <div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-  </nav>
+  <header class="page-header">
+    <h1>Community</h1>
+  </header>
   <header class="page-header community-header">
     <span class="dropdown">
       <span class="dropdown-toggle">
@@ -101,7 +101,7 @@
   {{pagination}}
   {{#if featured_posts}}
     <section class="section community-featured-posts">
-      <h3>{{t 'featured_posts'}}</h3>
+      <h1>{{t 'featured_posts'}}</h1>
       <ul class="promoted-articles">
         {{#each featured_posts}}
           <li class="promoted-articles-item">
@@ -113,13 +113,7 @@
       </ul>
     </section>
   {{/if}}
-  <section class="community-activity activity">
-    {{#if help_center.community_enabled}}
-      {{recent_activity scope='community'}}
-    {{/if}}
-  </section>
-  <section class="container community-footer">
-    <h4>{{t 'suggest_new_post'}}</h4>
-    {{link 'new_post' role='button' class='button-large'}}
-  </section>
 </div>
+<script>
+$("body").addClass("page-community");
+</script>

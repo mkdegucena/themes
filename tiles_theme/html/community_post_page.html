@@ -1,8 +1,9 @@
-<div class="container-divider"></div>
+<nav class="sub-nav">
+  <div class="container">
+    {{breadcrumbs}} {{search submit=false}}
+  </div>
+</nav>
 <div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}} {{search scoped=true submit=false}}
-  </nav>
   <div class="post-container">
     <div class="post">
       <article>
@@ -25,7 +26,6 @@
                 <span class="status-label-{{post.status_dasherized}} status-label">{{post.status_name}}</span>
             {{/is}}
           </div>
-          <div class="community-follow">{{subscribe}}</div>
         </header>
         <section class="post-info-container">
           <div class="post-info">
@@ -75,7 +75,6 @@
           </div>
         </section>
         <footer class="post-footer">
-          <div class="post-share">{{share}}</div>
           {{#if comments}}
             <a href="#comment-overview" class="post-comment-count">
               <span class="icon-comments"></span>
@@ -172,11 +171,8 @@
       </section>
       <p class="comment-callout">{{comment_callout}}</p>
     </div>
-    <section class="post-sidebar">
-      <h3 class="sidebar-title">{{t 'suggest_new_post'}}</h3>
-      <span class="post-to-community">
-        {{link 'new_post' role='button' class='button-large'}}
-      </span>
-    </section>
   </div>
 </div>
+<script>
+$("body").addClass("page-community");
+</script>
