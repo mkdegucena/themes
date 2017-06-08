@@ -1,8 +1,9 @@
-<div class="container-divider"></div>
+<nav class="sub-nav">
+  <div class="container">
+    {{breadcrumbs}} {{search submit=false}}
+  </div>
+</nav>
 <div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}} {{search scoped=true submit=false}}
-  </nav>
   <header class="page-header">
     <h1>
       {{topic.name}}
@@ -92,7 +93,3 @@
   </ul>
   {{pagination}}
 </div>
-<section class="container community-footer">
-  <h4>{{t 'suggest_new_post'}}</h4>
-  {{link 'new_post' role='button' class='button-large'}}
-</section>
