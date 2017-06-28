@@ -10,7 +10,7 @@ body {
   background-color: $color_5;
   color: $color_3;
   font-family: $font_2;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -158,6 +158,9 @@ ul {
   color: inherit;
 }
 
+.hide {
+  display: none;
+}
 
 /***** Buttons *****/
 
@@ -965,6 +968,95 @@ input[type="submit"][disabled] {
   text-align: center;
 }
 
+.knowledge-base {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.divider {
+  border-top: 1px solid #EEE;
+}
+
+
+
+/* Nav Sidebar */
+.nav-list {
+  position: relative;
+  flex: 1 1 25%;
+  background: #FAFAFA;
+}
+
+@media (min-width: 768px) {
+  .nav-list {
+    min-height: 45vh;
+  }
+}
+
+.nav-list:before {
+  content: '';
+  background: #FAFAFA;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -9999px;
+  right: 0px;
+  z-index: -1;
+}
+
+.nav-list-title {
+  margin: 20px 0 0;
+  padding: 12px 14px;
+}
+
+.nav-item-link {
+  display: block;
+  padding: 12px 14px;
+  color: #666;
+}
+
+.nav-item-link:hover,
+.nav-item-link:focus,
+.nav-item-link:active {
+  background: #EEE;
+  text-decoration: none;
+}
+
+.active .nav-item-link {
+  background: #EEE;
+  color: #222;
+}
+
+/* Nav Content */
+
+.nav-content {
+  flex: 4 4 75%;
+  padding: 40px;
+}
+
+@media (min-width: 768px) {
+  .nav-content {
+    padding: 60px
+  }
+}
+
+@media (min-width: 1024px) {
+  
+}
+
+.nav-content .article-list-item {
+  border-bottom: none;
+  padding: 10px 0;
+}
+
+.nav-category {
+  display: none;
+}
+
+.nav-category.active {
+  display: block;
+}
+
 
 /***** Promoted articles *****/
 
@@ -1035,7 +1127,6 @@ input[type="submit"][disabled] {
 
 .community,
 .activity {
-  border-top: 1px solid #ddd;
   padding: 30px 0;
 }
 

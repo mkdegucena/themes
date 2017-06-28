@@ -1,3 +1,48 @@
+var HC = {};
+HC.templates = {};
+
+HC.SETTINGS = {
+}
+
+Vue.options.delimiters = ['{[{', '}]}'];
+
+
+/*=========================================================
+ * HOME TEMPLATE
+ *========================================================= */
+
+HC.templates.home = new Vue({
+
+  data: {
+    currentCategory: null
+  },
+
+  created: function() {
+  },
+
+  mounted: function() {
+    var firstCategory = $(".nav-list").children(".nav-item").first(),
+        firstCategoryId = $(firstCategory).data("category-id");
+    this.currentCategory = firstCategoryId;
+  },
+
+  methods: {
+    isActive: function(id) {
+      return id === this.currentCategory;
+    },
+
+    setCategory: function(id) {
+      this.currentCategory = id;
+    }
+  }
+});
+
+
+
+
+
+
+
 /*
  * jQuery v1.9.1 included
  */
