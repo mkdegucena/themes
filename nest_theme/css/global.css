@@ -6,7 +6,14 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
+  min-height: 100%;
+  min-width: 320px;
   background-color: $color_5;
   color: $color_3;
   font-family: $font_2;
@@ -643,20 +650,33 @@ input[type="submit"][disabled] {
 
 /***** Footer *****/
 
-.footer {
-  border-top: 1px solid #ddd;
-  margin-top: 60px;
-  padding: 30px 0;
+main {
+  padding-bottom: 400px;
+}
+
+.footer-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .footer a {
   color: lighten($color_3, 20%);
 }
 
+.footer {
+  width: 100%;
+  height: 100px;
+  background: #555;
+  color: #FFF;
+}
+
 .footer-inner {
   max-width: 1160px;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 30px 5%;
   display: flex;
   justify-content: space-between;
 }
@@ -672,6 +692,29 @@ input[type="submit"][disabled] {
   color: lighten($color_3, 20%);
   display: inline-block;
   font-weight: 300;
+}
+
+.subfooter {
+  width: 100%;
+  padding: 60px 20px 80px;
+  background: #FAFAFA;
+  text-align: center;
+}
+
+.subfooter .submit-request {
+  display: inline-block;
+  background: #555;
+  padding: 14px 20px;
+  border-radius: 3px;
+  color: #FFF;
+  font-size: 18px;
+}
+
+.subfooter .submit-request:hover,
+.subfooter .submit-request:active,
+.subfooter .submit-request:focus {
+  background: #444;
+  text-decoration: none;
 }
 
 
@@ -1226,12 +1269,6 @@ input[type="submit"][disabled] {
   flex: 1;
 }
 
-@media (min-width: 1024px) {
-  .category-content {
-    flex: 0 0 80%;
-  }
-}
-
 .section-tree {
   display: flex;
   flex-direction: column;
@@ -1300,12 +1337,6 @@ input[type="submit"][disabled] {
   flex: 1;
 }
 
-@media (min-width: 1024px) {
-  .section-content {
-    flex: 0 0 80%;
-  }
-}
-
 .section-subscribe .dropdown-toggle::after {
   display: none;
 }
@@ -1324,8 +1355,8 @@ input[type="submit"][disabled] {
 
 @media (min-width: 1024px) {
   .article {
-    flex: 1 0 66%;
-    max-width: 66%;
+    flex: 1 0 70%;
+    max-width: 70%;
     min-width: 640px;
     padding: 0 30px;
   }
@@ -1504,7 +1535,7 @@ input[type="submit"][disabled] {
 @media (min-width: 1024px) {
   .article-sidebar {
     border: 0;
-    flex: 0 0 17%;
+    flex: 0 0 20%;
     height: auto;
   }
 }
