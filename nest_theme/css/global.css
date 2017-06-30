@@ -775,7 +775,7 @@ input[type="submit"][disabled] {
 .hero-inner {
   position: relative;
   padding: 25px 0;
-  max-width: 810px;
+  max-width: 910px;
   margin: 0 auto;
 }
 
@@ -838,7 +838,7 @@ input[type="submit"][disabled] {
   justify-content: space-between;
   margin-bottom: 30px;
   min-height: 50px;
-  padding-bottom: 15px;
+  padding: 15px 0;
 }
 
 @media (min-width: 768px) {
@@ -984,36 +984,24 @@ input[type="submit"][disabled] {
 /* Nav Sidebar */
 .nav-list {
   position: relative;
-  flex: 1 1 25%;
-  background: #FAFAFA;
-}
-
-@media (min-width: 768px) {
-  .nav-list {
-    min-height: 45vh;
-  }
-}
-
-.nav-list:before {
-  content: '';
-  background: #FAFAFA;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -9999px;
-  right: 0px;
-  z-index: -1;
+  flex: 1 1 20%;
+  padding: 50px 0;
 }
 
 .nav-list-title {
-  margin: 20px 0 0;
-  padding: 12px 14px;
+  margin: 0;
+  padding: 12px 0;
+  font-size: 20px;
 }
 
 .nav-item-link {
   display: block;
+  margin-bottom: 8px;
   padding: 12px 14px;
+  border-radius: 3px;
+  background: #F8F8F8;
   color: #666;
+  font-size: 18px;
 }
 
 .nav-item-link:hover,
@@ -1024,8 +1012,8 @@ input[type="submit"][disabled] {
 }
 
 .active .nav-item-link {
-  background: #EEE;
-  color: #222;
+  background: #555;
+  color: #FFF;
 }
 
 /* Nav Content */
