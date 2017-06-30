@@ -1,4 +1,4 @@
-var sections = []
+var sections = [];
 
 var titles = [
     "At iste non dolendi status",
