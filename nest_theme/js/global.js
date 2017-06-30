@@ -24,6 +24,8 @@ HC.templates.home = new Vue({
     var firstCategory = $(".nav-list").children(".nav-item").first(),
         firstCategoryId = $(firstCategory).data("category-id");
     this.currentCategory = firstCategoryId;
+
+    $(".nav-content-inner").removeClass('hide');
   },
 
   methods: {
