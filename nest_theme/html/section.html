@@ -1,7 +1,11 @@
-<div class="container-divider"></div>
+<section class="hero">
+  <div class="hero-inner">
+    {{search scoped=true submit=false instant=true class='search search-full'}}
+  </div>
+</section>
 <div class="container">
   <nav class="sub-nav">
-    {{breadcrumbs}} {{search submit=false}}
+    {{breadcrumbs}}
   </nav>
   <div class="section-container">
     <section class="section-content">
