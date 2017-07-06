@@ -1361,6 +1361,7 @@ ul {
 }
 
 .article-header {
+  margin-bottom: 40px;
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -1505,6 +1506,10 @@ ul {
   min-height: 45px;
 }
 
+.article-nav:hover .article-nav-title {
+  color: #666;
+}
+
 .article-nav-label {
   display: block;
   font-size: 16px;
@@ -1513,7 +1518,7 @@ ul {
 .article-nav-title {
   display: none;
   font-size: 14px;
-  color: #BBB;
+  color: #AAA;
 }
 
 @media (min-width: 768px) {
