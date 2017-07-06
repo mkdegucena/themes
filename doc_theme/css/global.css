@@ -507,9 +507,30 @@ ul {
   margin-right: 0;
 }
 
-.nav-wrapper .search {
+.header .search {
+  display: none;
   min-width: 300px;
-  margin-right: 20px;
+  max-width: 600px;
+  width: 50%;
+  margin: 0 20px;
+}
+
+
+
+.mobile-search-wrapper {
+  padding: 10px;
+  background: #FAFAFA;
+  border-bottom: 1px solid #DDD;
+}
+
+@media (min-width: 768px) {
+  .mobile-search-wrapper {
+    display: none;
+  }
+
+  .header .search {
+    display: inline-block;
+  }
 }
 
 /***** User info in header *****/

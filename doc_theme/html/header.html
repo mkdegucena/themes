@@ -1,16 +1,18 @@
 <header class="header">
   <div class="logo">
-    {{#link 'help_center'}}
-      <img src="{{logo_url}}" alt="{{t 'logo'}}">
+    {{#link 'help_center' class='logo-link' }}
+    <img src="{{logo_url}}" alt="{{t 'logo'}}">
+    <h3 class="logo-title">Zen Themes</h3>
     {{/link}}
   </div>
-  
+  {{search submit=false instant=true}}
   <div class="nav-wrapper">
-    {{search submit=false instant=false}}
-
     <nav class="user-nav" id="user-nav">
       {{link 'new_request'}}
     </nav>
     {{user_info}}
   </div>
 </header>
+<div class="mobile-search-wrapper">
+  {{search submit=false instant=true}}
+</div>
