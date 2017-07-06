@@ -4,7 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   background-color: $color_5;
   color: $color_3;
   font-family: 'Open Sans', $font_2;
@@ -19,6 +27,13 @@ body {
     min-height: 65vh;
   }
 }
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Droid Sans', $font_1;
@@ -401,8 +416,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
   width: 100%;
   height: 70px;
   margin: 0 auto;
@@ -622,11 +635,6 @@ ul {
 /***** Sidebar *****/
 
 .sidebar-panel {
-  position: fixed;
-  z-index: 10;
-  top: 71px;
-  left: 0;
-  bottom: 0;
   padding: 40px 30px 30px;
   width: 320px;
   background: #FAFAFA;
@@ -635,6 +643,13 @@ ul {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
 }
+
+@media (max-width: 768px) {
+  .sidebar-panel {
+    display: none;
+  }
+}
+
 
 .sidebar-item {
   margin-top: 10px;
@@ -700,17 +715,12 @@ ul {
 /***** Content *****/
 
 .content {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
+  width: 100%;
   height: auto;
   min-height: 40vh;
-  max-width: 900px;
-  padding: 40px;
-  margin: 70px auto 0;
+  max-width: 980px;
+  margin: 0;
+  padding: 40px 20px;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -720,9 +730,9 @@ ul {
   z-index: 2;
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 768px) {
   .content {
-    margin-left: 320px;
+    padding: 40px;
   }
 }
 
@@ -830,14 +840,6 @@ ul {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 10px 0;
-}
-
-@media (min-width: 768px) {
-  .page-header {
-    align-items: baseline;
-    flex-direction: row;
-    margin: 0;
-  }
 }
 
 .page-header .section-subscribe {
@@ -1204,7 +1206,7 @@ ul {
   justify-content: space-between;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section-tree {
     flex-direction: row;
   }
@@ -1214,7 +1216,7 @@ ul {
   flex: initial;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .section-tree .section {
     flex: 0 0 45%;
     /* Two columns for tablet and desktop. Leaving 5% separation between columns */
