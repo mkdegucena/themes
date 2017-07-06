@@ -1445,6 +1445,7 @@ main {
 @media (min-width: 1024px) {
   .article-container {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -1610,7 +1611,7 @@ main {
 @media (min-width: 1024px) {
   .article-sidebar {
     border: 0;
-    flex: 0 0 20%;
+    flex: 0 0 26%;
     height: auto;
   }
 }
