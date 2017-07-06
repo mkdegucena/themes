@@ -12,12 +12,19 @@
       {{#each categories}}
         {{#if ../has_multiple_categories}}
           <li :class="['nav-item', isActive({{id}}) && 'active']" data-category-id="{{id}}">
-            <a href='#{{id}}' class="nav-item-link" @click='setCategory({{id}})'>{{name}}</a>
+            <a href='#{{id}}' class="nav-item-tab" @click='setCategory({{id}})'>{{name}}</a>
+            <a href='{{url}}' class="nav-item-link">{{name}}</a>
           </li>
         {{else}}
           {{#each sections}}
             <li class="nav-item">
-              <a href='#{{id}}' class="nav-item-link">
+              <a href='#{{id}}' class="nav-item-tab">
+                {{name}}
+                {{#if internal}}
+                  <span class="icon-lock" title="{{t 'internal'}}"></span>
+                {{/if}}
+              </a>
+              <a href='{{url}}' class="nav-item-link">
                 {{name}}
                 {{#if internal}}
                   <span class="icon-lock" title="{{t 'internal'}}"></span>
