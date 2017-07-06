@@ -1048,26 +1048,31 @@ main {
 /* Nav Sidebar */
 .nav-list {
   position: relative;
-  flex: 1 1 20%;
-  padding: 50px 0;
+  flex: 1 1 100%;
+  padding: 30px 0;
 }
 
-.nav-list-title {
-  margin: 0;
-  padding: 12px 0;
-  font-size: 20px;
-}
-
+.nav-item-tab,
 .nav-item-link {
   display: block;
   margin-bottom: 8px;
-  padding: 12px 14px;
+  padding: 16px 10px;
   border-radius: 3px;
   background: #F8F8F8;
   color: #666;
   font-size: 18px;
+  text-align: center;
 }
 
+.nav-item-tab {
+  display: none;
+  text-align: left;
+  padding: 12px 14px;
+}
+
+.nav-item-tab:hover,
+.nav-item-tab:focus,
+.nav-item-tab:active,
 .nav-item-link:hover,
 .nav-item-link:focus,
 .nav-item-link:active {
@@ -1075,7 +1080,7 @@ main {
   text-decoration: none;
 }
 
-.active .nav-item-link {
+.active .nav-item-tab {
   background: #555;
   color: #FFF;
 }
@@ -1083,18 +1088,45 @@ main {
 /* Nav Content */
 
 .nav-content {
-  flex: 4 4 75%;
-  padding: 40px;
+  display: none;
+  flex: 4 4 60%;
+  padding: 40px 50px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 568px) {
+  .nav-list-title {
+    text-align: left;
+  }
+
+  .nav-item-tab {
+    display: block;
+  }
+
+  .nav-item-link {
+    display: none;
+  }
+
+  .nav-list {
+    padding: 50px 0;
+    flex: 1 1 35%;
+  }
+
   .nav-content {
-    padding: 60px
+    display: flex;
   }
 }
 
+@media (min-width: 768px) {
+}
+
 @media (min-width: 1024px) {
-  
+  .nav-list {
+    flex: 1 1 25%;
+  }
+
+  .nav-content {
+    flex: 4 4 70%;
+  }
 }
 
 .nav-content .article-list-item {
@@ -1108,6 +1140,27 @@ main {
 
 .nav-category.active {
   display: block;
+}
+
+.nav-category-title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav-category .article-list {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .nav-category .section {
+    width: 45%;
+  }
 }
 
 
@@ -1320,6 +1373,7 @@ main {
 
 .section-tree-title {
   margin-bottom: 0;
+  font-size: 20px;
 }
 
 .section-tree-title a {
