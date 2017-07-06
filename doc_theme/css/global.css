@@ -41,6 +41,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
+h1, h2, h3 {
+  color: $color_1;
+}
+
 h1 {
   font-size: 32px;
 }
@@ -420,7 +424,7 @@ ul {
   height: 70px;
   margin: 0 auto;
   padding: 0 30px;
-  background: #FFF;
+  background: #415d67;
   border-bottom: 1px solid #EEE;
   z-index: 10;
 }
@@ -463,9 +467,10 @@ ul {
 
 .nav-wrapper a {
   border: 0;
-  color: $color_4;
+  color: #FFF;
   display: none;
   font-size: 14px;
+  font-weight: 600;
   padding: 0 20px 0 0;
   width: auto;
 }
@@ -482,7 +487,7 @@ ul {
 
 .nav-wrapper a:hover, .nav-wrapper a:focus, .nav-wrapper a:active {
   background-color: transparent;
-  color: $color_4;
+  color: #FFF;
   text-decoration: underline;
 }
 
@@ -550,19 +555,20 @@ ul {
 
 .user-info > [role="button"] {
   border: 0;
-  color: $color_4;
+  color: #fff;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
+  font-weight: 500;
 }
 
 .user-info > [role="button"]:hover {
-  color: $color_4;
+  color: #fff;
   background-color: transparent;
 }
 
 .user-info > [role="button"]::after {
-  color: $color_4;
+  color: #fff;
   padding-right: 15px;
 }
 
@@ -574,6 +580,7 @@ ul {
 #user #user-name {
   display: none;
   font-size: 14px;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -588,10 +595,10 @@ ul {
 
 /***** User avatar *****/
 .user-avatar {
+  display: none;
   height: 25px;
   width: 25px;
   border-radius: 50%;
-  display: inline-block;
   vertical-align: middle;
 }
 
