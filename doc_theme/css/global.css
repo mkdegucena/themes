@@ -693,8 +693,7 @@ ul {
 
 
 .sidebar-item {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 6px 0;
   font-family: 'Droid Sans', $font_1;
   color: #333;
 }
@@ -715,10 +714,33 @@ ul {
   color: #333;
 }
 
+
+.sidebar-item-title:before {
+  content: "\E75E";
+  font-family: "entypo";
+  margin-right: 5px;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  opacity: .6;
+}
+
+.sidebar-item.open > .sidebar-item-title:before {
+  content: "\E75C";
+  opacity: 1;
+}
+
+.sidebar-home .sidebar-item-title:before {
+  display: none;
+}
+
 .sidebar-item.open > .sidebar-item-title,
 .sidebar-item.current .sidebar-item-link {
   color: $color_4;
+  font-weight: 600;
 }
+
 
 .sidebar-item-link {
   display: block;
@@ -761,7 +783,7 @@ ul {
   min-height: 40vh;
   max-width: 980px;
   margin: 0;
-  padding: 40px 20px;
+  padding: 20px;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -851,6 +873,7 @@ ul {
   right: 15px;
   left: auto;
 }
+
 
 .search-full input[type="search"] {
   border: 1px solid #fff;
