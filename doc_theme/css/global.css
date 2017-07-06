@@ -28,7 +28,7 @@ body {
   }
 }
 
-main {
+main.main-sidebar {
   display: flex;
   justify-content: flex-start;
   flex: 1;

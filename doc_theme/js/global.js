@@ -17,8 +17,8 @@ var sidebar = new Vue({
   },
 
   created: function() {
+    $("main").addClass("main-sidebar");
     this.isArticle = window.location.pathname.indexOf("/articles/") > -1;
-
     this.fetchData();
   },
 
