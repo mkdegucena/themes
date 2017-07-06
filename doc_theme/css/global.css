@@ -430,7 +430,20 @@ ul {
 }
 
 .logo img {
-  max-height: 37px;
+  max-height: 26px;
+}
+
+.logo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-title {
+  margin: 0;
+  margin-left: 10px;
+  color: #FFF;
+  white-space: nowrap;
 }
 
 .user-nav {
