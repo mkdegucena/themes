@@ -696,18 +696,23 @@ main {
 
 .subfooter {
   width: 100%;
-  padding: 60px 20px 80px;
+  padding: 30px 20px;
   background: #FAFAFA;
   text-align: center;
 }
 
+.subfooter h1 {
+  font-size: 24px;
+}
+
 .subfooter .submit-request {
   display: inline-block;
+  width: 100%;
+  font-size: 16px;
   background: #555;
   padding: 14px 20px;
   border-radius: 3px;
   color: #FFF;
-  font-size: 18px;
 }
 
 .subfooter .submit-request:hover,
@@ -717,6 +722,22 @@ main {
   text-decoration: none;
 }
 
+@media (min-width: 568px) {
+  .subfooter .submit-request {
+    width: auto;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .subfooter {
+    padding: 60px 20px 80px;
+  }
+
+  .subfooter h1 {
+    font-size: 32px;
+  }
+}
 
 /***** Breadcrumbs *****/
 
