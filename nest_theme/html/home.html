@@ -39,7 +39,8 @@
       <div class="nav-content-inner hide">
         {{#each categories}}
           <div :class="['nav-category', isActive({{id}}) && 'active']" data-category-id="{{id}}">
-            <h1 class="nav-category-title">{{name}}</h1>
+            <h1 class="nav-category-title"><a href="{{url}}">{{name}}</a></h1>
+            <div class="nav-category-list">
             {{#each sections}}
               <section class="section">
                 <h3 class="section-tree-title">
@@ -71,6 +72,7 @@
                 {{/if}}
               </section>
             {{/each}}
+            </div>
           </div>
         {{/each}}
       </div>
