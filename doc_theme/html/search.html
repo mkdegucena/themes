@@ -5,8 +5,8 @@
         Home
       </a>
     </li>
-    <li :class="showCategory && 'sidebar-section'" v-for='category in categories' :data-id='category.id'>
-      <h4 class="sidebar-category-title" v-if='showCategory'>{[{category.name}]}</h4>
+    <li class="sidebar-section" v-for='category in categories' :data-id='category.id'>
+      <h4 class="sidebar-category-title" v-cloak>{[{category.name}]}</h4>
       <ul>
         <li :class="['sidebar-item', isOpen(section.id)]" v-for='section in category.sections' :data-id='section.id'>
           <span class="sidebar-item-title" @click='setActiveSection(section.id)'>
