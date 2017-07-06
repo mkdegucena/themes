@@ -6,9 +6,6 @@
 <div class="container">
   <section class="knowledge-base">
     <ul class="nav-list">
-      <li>
-        <h3 class="nav-list-title">Categories</h3>
-      </li>
       {{#each categories}}
         {{#if ../has_multiple_categories}}
           <li :class="['nav-item', isActive({{id}}) && 'active']" data-category-id="{{id}}">
