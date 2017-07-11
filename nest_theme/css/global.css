@@ -16,7 +16,7 @@ body {
   min-width: 320px;
   background-color: $color_5;
   color: $color_3;
-  font-family: $font_2;
+  font-family: "Raleway", $font_2;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -38,6 +38,10 @@ h6 {
   font-family: $font_1;
   font-weight: 400;
   margin-top: 0;
+}
+
+h1, h2 {
+  font-family: "Abel";
 }
 
 h1 {
@@ -512,6 +516,7 @@ input[type="submit"][disabled] {
   color: $color_4;
   display: none;
   font-size: 14px;
+  font-weight: 600;
   padding: 0 20px 0 0;
   width: auto;
 }
@@ -536,6 +541,7 @@ input[type="submit"][disabled] {
 
 .nav-wrapper a.login {
   display: inline-block;
+  font-size: 14px;
 }
 
 .nav-wrapper .icon-menu {
@@ -598,6 +604,7 @@ input[type="submit"][disabled] {
 #user #user-name {
   display: none;
   font-size: 14px;
+  font-weight: 600;
 }
 
 @media (min-width: 768px) {
@@ -612,6 +619,10 @@ input[type="submit"][disabled] {
 
 
 /***** User avatar *****/
+
+.header .user-avatar {
+  display: none;
+}
 
 .user-avatar {
   height: 25px;
@@ -718,7 +729,7 @@ main {
 .subfooter .submit-request:hover,
 .subfooter .submit-request:active,
 .subfooter .submit-request:focus {
-  background: #444;
+  background: $color_1;
   text-decoration: none;
 }
 
@@ -760,15 +771,12 @@ main {
   max-width: 450px;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 600;
 }
 
 .breadcrumbs li + li::before {
   content: ">";
   margin: 0 4px;
-}
-
-.breadcrumbs li a:visited {
-  color: $color_4;
 }
 
 
@@ -827,7 +835,7 @@ main {
 /***** Hero component *****/
 
 .hero {
-  background: #555;
+  background: #EEE;
   background-position: center;
   background-size: cover;
   height: 100px;
@@ -1062,6 +1070,7 @@ main {
   color: #666;
   font-size: 18px;
   text-align: center;
+  font-weight: 600;
 }
 
 .nav-item-tab {
@@ -1081,7 +1090,7 @@ main {
 }
 
 .active .nav-item-tab {
-  background: #555;
+  background: $color_1;
   color: #FFF;
 }
 
@@ -1377,7 +1386,13 @@ main {
 }
 
 .section-tree-title a {
-  color: $color_3;
+  font-weight: 400;
+  color: $color_4;
+}
+
+.see-all-articles {
+  font-weight: 600;
+  color: #333;
 }
 
 .section-tree .see-all-articles {
@@ -1754,7 +1769,7 @@ main {
   border-radius: 4px;
   color: $color_3;
   display: block;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 10px;
   padding: 10px;
 }
@@ -1764,6 +1779,7 @@ main {
   background-color: $color_1;
   color: $color_2;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .recent-articles h3,
