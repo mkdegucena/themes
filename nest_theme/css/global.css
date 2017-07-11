@@ -79,7 +79,7 @@ textarea {
 }
 
 input {
-  font-weight: 300;
+  font-weight: 400;
   max-width: 100%;
   box-sizing: border-box;
   outline: none;
@@ -301,7 +301,7 @@ input[type="submit"][disabled] {
 .table th a {
   color: lighten($color_3, 20%);
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -702,7 +702,7 @@ main {
 .footer-language-selector {
   color: lighten($color_3, 20%);
   display: inline-block;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .subfooter {
@@ -766,7 +766,7 @@ main {
 .breadcrumbs li {
   color: lighten($color_3, 20%);
   display: inline;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   max-width: 450px;
   overflow: hidden;
@@ -885,7 +885,7 @@ main {
 
 .page-header-description {
   font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 0 30px 0;
   word-break: break-word;
 }
@@ -1015,7 +1015,7 @@ main {
 }
 
 .blocks-item-description {
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -1285,7 +1285,7 @@ main {
 
 .recent-activity-item-link {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .recent-activity-item-meta {
@@ -1308,7 +1308,7 @@ main {
   color: lighten($color_3, 20%);
   display: inline-block;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .recent-activity-item-comment {
@@ -1600,7 +1600,7 @@ main {
 
 .article-comment-count {
   color: lighten($color_3, 20%);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .article-comment-count:hover {
@@ -1914,7 +1914,7 @@ main {
 .comment-callout {
   color: lighten($color_3, 20%);
   display: inline-block;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   margin-bottom: 0;
 }
@@ -1930,7 +1930,7 @@ main {
 
 .comment-sorter a {
   color: lighten($color_3, 20%);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   text-decoration: none;
 }
@@ -2457,7 +2457,7 @@ main {
 
 .striped-list-count {
   color: lighten($color_3, 20%);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   justify-content: flex-start;
   text-transform: capitalize;
@@ -2488,7 +2488,7 @@ main {
 }
 
 .striped-list-number {
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -2784,7 +2784,7 @@ main {
 
 .post-comment-count {
   color: lighten($color_3, 20%);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .post-comment-count:hover {
@@ -3300,7 +3300,7 @@ main {
 .contributions-table td:last-child {
   color: lighten($color_3, 20%);
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media (min-width: 768px) {
@@ -3503,7 +3503,7 @@ main {
 
 .request-details dt {
   color: lighten($color_3, 20%);
-  font-weight: 300;
+  font-weight: 400;
   width: 40%;
 }
 
@@ -3623,7 +3623,7 @@ main {
 .meta-data {
   color: lighten($color_3, 20%);
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .meta-data:not(:last-child)::after {
@@ -3879,7 +3879,7 @@ main {
 
 .profile-stats .stat-label {
   color: lighten($color_3, 20%);
-  font-weight: 300;
+  font-weight: 400;
   flex: 0 0 100px;
   margin-right: 10px;
 }
@@ -4044,7 +4044,7 @@ main {
   flex-basis: 100%;
   padding: 10px 0;
   color: lighten($color_3, 20%);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
@@ -4401,7 +4401,7 @@ main {
   color: lighten($color_3, 20%);
   display: inline-block;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 4px 5px;
   position: relative;
 }
