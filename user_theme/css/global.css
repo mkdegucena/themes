@@ -460,6 +460,7 @@ input[type="submit"][disabled] {
 
 .header {
   background: $color_1;
+  border-bottom: 2px solid #EEE;
 }
 
 .header-inner {
@@ -469,7 +470,7 @@ input[type="submit"][disabled] {
   position: relative;
   align-items: center;
   display: flex;
-  height: 71px;
+  height: 61px;
   justify-content: space-between;
 }
 
@@ -481,7 +482,7 @@ input[type="submit"][disabled] {
 }
 
 .logo img {
-  max-height: 37px;
+  max-height: 24px;
 }
 
 .user-nav {
@@ -518,6 +519,7 @@ input[type="submit"][disabled] {
   padding: 0 20px 0 0;
   width: auto;
   font-weight: 600;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -668,7 +670,7 @@ input[type="submit"][disabled] {
   right: 0;
   bottom: 0;
   height: 80px;
-  background: #393E46;
+  background: $color_1;
   border-top: 1px solid #ddd;
   margin-top: 60px;
   padding: 30px 0;
@@ -717,7 +719,7 @@ input[type="submit"][disabled] {
 .breadcrumbs li {
   color: lighten($color_3, 20%);
   display: inline;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 13px;
   max-width: 450px;
   overflow: hidden;
@@ -781,19 +783,32 @@ input[type="submit"][disabled] {
 
 .search-full input[type="search"] {
   border: 1px solid #fff;
+  border-radius: 3px;
 }
 
 
 /***** Hero component *****/
 
 .hero {
+  position: relative;
   background-image: url($homepage_background_image);
-  background-position: center;
+  background-position: center 55%;
   background-size: cover;
   height: 300px;
   padding: 0 20px;
   text-align: center;
   width: 100%;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;
+  opacity: 0.3;
+  z-index: 0;
 }
 
 .hero-inner {
@@ -802,6 +817,12 @@ input[type="submit"][disabled] {
   transform: translateY(-50%);
   max-width: 610px;
   margin: 0 auto;
+}
+
+.hero-title {
+  color: #FFF;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .page-header {
@@ -813,6 +834,10 @@ input[type="submit"][disabled] {
 }
 
 @media (min-width: 768px) {
+  .hero-title {
+    font-size: 42px;
+  }
+
   .page-header {
     align-items: baseline;
     flex-direction: row;
@@ -895,13 +920,15 @@ input[type="submit"][disabled] {
 }
 
 .tabs .tab {
+  position: relative;
+  top: 3px;
   margin: 0;
   padding: 0 20px 5px;
   cursor: pointer;
 }
 
 .tab.active {
-  border-bottom: 3px solid $color_1;
+  border-bottom: 3px solid $color_4;
 }
 
 .tab-content {
@@ -4230,7 +4257,7 @@ input[type="submit"][disabled] {
 
 @media (min-width: 1024px) {
   .search-results-column {
-    flex: 0 0 45%;
+    /*flex: 0 0 45%;*/
   }
 }
 

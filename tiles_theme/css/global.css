@@ -459,7 +459,7 @@ input[type="submit"][disabled] {
 /***** Header *****/
 
 .header {
-  background: #444;
+  background: $color_1;
 }
 
 .header-inner {
@@ -481,7 +481,7 @@ input[type="submit"][disabled] {
 }
 
 .logo img {
-  max-height: 37px;
+  max-height: 24px;
 }
 
 .user-nav {
@@ -666,7 +666,7 @@ input[type="submit"][disabled] {
   left: 0;
   right: 0;
   height: 275px;
-  background: #f8f8f8
+  background: $color_1;
 }
 
 .footer a {
@@ -675,7 +675,7 @@ input[type="submit"][disabled] {
 
 .footer-bottom {
   padding: 30px 0;
-  background: #444;
+  background: $color_1;
 }
 
 .footer-inner {
@@ -777,8 +777,10 @@ input[type="submit"][disabled] {
 }
 
 .breadcrumbs li + li::before {
-  content: ">";
+  content: "\E75E";
   margin: 0 4px;
+  font-family: "entypo";
+  color: #888;
 }
 
 
@@ -832,7 +834,7 @@ input[type="submit"][disabled] {
 /***** Hero component *****/
 
 .hero {
-  background: #444;
+  background: $color_1;
   background-position: center;
   background-size: cover;
   height: 250px;
@@ -1681,7 +1683,7 @@ li.article-list-item:nth-child(3) ~ .article-list-item {
 }
 
 .sidenav-item {
-  border-radius: 4px;
+  border-radius: 3px;
   color: $color_3;
   display: block;
   font-weight: 300;
@@ -1694,6 +1696,7 @@ li.article-list-item:nth-child(3) ~ .article-list-item {
   background-color: $color_1;
   color: $color_2;
   text-decoration: none;
+  font-weight: 400
 }
 
 .recent-articles h3,
