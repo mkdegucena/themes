@@ -7,7 +7,7 @@
 ### Home Page
 
 ![Classic Theme](../screenshots/classic/home.png)
-![Classic Theme](../screenshots/classic/home-2.png)
+
 
 ### Category Page
 

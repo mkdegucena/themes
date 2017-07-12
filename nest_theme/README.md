@@ -8,13 +8,13 @@
 
 ### Home Page
 
-![Nest Theme](../screenshots/Nest/home.png)
-![Nest Theme](../screenshots/Nest/home-2.png)
+![Nest Theme](../screenshots/nest/home.png)
+
 
 ### Category Page
 
-![Nest Theme](../screenshots/Nest/category.png)
+![Nest Theme](../screenshots/nest/category.png)
 
 ### Article Page
 
-![Nest Theme](../screenshots/Nest/article.png)
+![Nest Theme](../screenshots/nest/article.png)
