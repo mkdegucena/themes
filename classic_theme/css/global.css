@@ -44,6 +44,10 @@ h6 {
   margin-top: 0;
 }
 
+h1, h2, h3 {
+  color: $color_4;
+}
+
 h1 {
   font-size: 32px;
 }
@@ -713,7 +717,7 @@ input[type="submit"][disabled] {
   display: inline-block;
   min-width: 200px;
   padding: 10px 16px;
-  border: 1px solid #555;
+  border: 1px solid $color_4;
   border-radius: 2px;
   font-weight: 500;
   color: #444;
@@ -723,7 +727,7 @@ input[type="submit"][disabled] {
 }
 
 .subfooter a:hover {
-  background: #555;
+  background: $color_4;
   color: #FFF;
 }
 
