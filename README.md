@@ -30,7 +30,7 @@
 - medium to large number of categories (3+)
 - reduce clicks into categories/sections
 
-![Nest Theme](screenshots/Nest/home.png)
+![Nest Theme](screenshots/nest/home.png)
 
 
 ## [Classic Theme](classic_theme)
