@@ -1,6 +1,6 @@
 ## [Doc Theme](doc_theme)
 
-[Doc Theme](https://doc-theme.zendesk.com/hc/en-us)
+[Doc Theme Demo](https://doc-theme.zendesk.com/hc/en-us)
 
 - Inspired by technical documentation sites where a full-height sidebar is favored to easily navigate to any topic or feature
 - Good for use cases where customers:
@@ -11,7 +11,7 @@
 
 ## [Role Theme](role_theme)
 
-[Role Theme](https://role-theme.zendesk.com/hc/en-us)
+[Role Theme Demo](https://role-theme.zendesk.com/hc/en-us)
 
 - Inspired by reoccurring requests by customers to organize their content around user roles
 - Good for use cases where:
@@ -23,7 +23,7 @@
 
 ## [Nest Theme](nest_theme)
 
-[Nest Theme](https://nest-theme.zendesk.com/hc/en-us)
+[Nest Theme Demo](https://nest-theme.zendesk.com/hc/en-us)
 
 - Inspired by requests to display all categories and sections on homepage in an accessible and uncluttered manner.
 - Good for:
@@ -35,7 +35,7 @@
 
 ## [Classic Theme](classic_theme)
 
-- [Classic Theme](https://classic-theme.zendesk.com/hc/en-us)
+- [Classic Theme Demo](https://classic-theme.zendesk.com/hc/en-us)
 - Inspired by timelessness of large icon tiles, one of the most popular layouts on Zendesk help center themes
 - Good for:
 - 3-4 categories
