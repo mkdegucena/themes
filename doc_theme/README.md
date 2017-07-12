@@ -9,7 +9,7 @@ Doc Theme Demo](https://doc-theme.zendesk.com/hc/en-us)
 ### Home Page
 
 ![Doc Theme](../screenshots/doc/home.png)
-![Doc Theme](../screenshots/doc/home.png)
+
 
 ### Category Page
 

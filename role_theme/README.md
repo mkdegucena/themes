@@ -8,7 +8,7 @@
 ### Home page
 
 ![Role Theme](../screenshots/role/home.png)
-![Role Theme](../screenshots/role/home-2.png)
+
 
 ### Category page
 
